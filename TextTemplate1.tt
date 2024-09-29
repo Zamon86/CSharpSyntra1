@@ -1,0 +1,110 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="System.IO" #>
+
+<#
+string[] controlNames = {
+    "ucOndernemingMetEigenVermogen",
+    "ucOmwentelingWiel",
+    "ucAantalOmwentelingen",
+    "ucCurrencyConverter",
+    "ucCelsius_Fahrenheid",
+    "ucHandelaarPeeters",
+    "ucWatKostMijnAugo",
+    "ucGemiddelde",
+    "ucSaldo",
+    "ucHetGrootsteGetal",
+    "ucVerzekeringsPolis",
+    "ucIngelezenEenheidsPrijs",
+    "ucGetallenZijnGelijk",
+    "ucDrieGetallenVergelijken",
+    "ucEenWillekeurigGetalVergelijken",
+    "ucHetKleinsteGetal",
+    "ucHetVerschil",
+    "ucControleRekeningNummer",
+    "ucWinkelKorting",
+    "ucOpeningBenzineStation",
+    "ucOpeningBenzineStation2",
+    "ucBloemenWinkel",
+    "uc10Getallen",
+    "uc10GetallenOmgekeerd",
+    "uc10KeerDeVoornaam",
+    "ucGeef10Evengetallen",
+    "ucGemiddeldeVerbruik",
+    "ucVreemdeMuntenOmrekenen",
+    "ucAantalArtikelen",
+    "ucBiljartClub",
+    "ucIntrestOp15Jaar",
+    "ucPrognoseVerkoop",
+    "ucTweeNatuurlijkeGetallen",
+    "ucSomVan5de10de15de",
+    "ucExtraGrootsteKleinste",
+    "ucFillingAnArray",
+    "ucVoidMethodes",
+    "ucFuncionMethodes",
+    "ucSpecialMethode"
+};
+
+
+string outputDir = Path.GetDirectoryName(Host.TemplateFile);
+string xamlDir = Path.Combine(outputDir, "GeneratedControls");
+
+
+if (!Directory.Exists(xamlDir)) {
+    Directory.CreateDirectory(xamlDir);
+}
+
+
+foreach (var controlName in controlNames)
+{
+    
+    string xamlFilePath = Path.Combine(xamlDir, controlName + ".xaml");
+    string xamlContent = GenerateXamlContent(controlName);
+    File.WriteAllText(xamlFilePath, xamlContent);
+
+  
+    string csFilePath = Path.Combine(xamlDir, controlName + ".xaml.cs");
+    string csContent = GenerateXamlCsContent(controlName);
+    File.WriteAllText(csFilePath, csContent);
+}
+
+
+string GenerateXamlContent(string controlName)
+{
+    return $@"
+<UserControl
+    x:Class=""LogikaOefening.{controlName}""
+    xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+    xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""
+    xmlns:d=""http://schemas.microsoft.com/expression/blend/2008""
+    xmlns:local=""clr-namespace:LogikaOefening""
+    xmlns:mc=""http://schemas.openxmlformats.org/markup-compatibility/2006""
+    d:DesignHeight=""1000""
+    d:DesignWidth=""1000""
+    mc:Ignorable=""d""
+    Background=""#669BBC"">
+</UserControl>";
+}
+
+
+string GenerateXamlCsContent(string controlName)
+{
+    return $@"
+using System;
+using System.Windows.Controls;
+
+namespace LogikaOefening
+{{
+    /// <summary>
+    /// Interaction logic for {controlName}.xaml
+    /// </summary>
+    public partial class {controlName} : UserControl
+    {{
+        public {controlName}()
+        {{
+            InitializeComponent();
+        }}
+    }}
+}}";
+}
+#>

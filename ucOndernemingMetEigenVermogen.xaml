@@ -1,0 +1,274 @@
+﻿<UserControl
+    x:Class="LogikaOefening.ucOndernemingMetEigenVermogen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogikaOefening"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type local:TextBoxWithSymbol}}" TargetType="local:TextBoxWithSymbol">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <Grid Name="grdVermogen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="10"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Onderneming met eigen vermogen" />
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="1"
+            Text="Eigen vermogen:" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="1"
+            Text="Vreemd vermogen:" />
+
+        <TextBlock
+            Grid.Row="6"
+            Grid.Column="1"
+            Text="Totaal actief:" />
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="3"
+            Text="Totaal actief:" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="3"
+            Text="Vreemd vermogen:" />
+
+        <TextBlock
+            Grid.Row="6"
+            Grid.Column="3"
+            Text="Eigen vermogen:" />
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="5"
+            Text="Aftrekbare BTW:" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="5"
+            Text="Verschuldigde BTW:" />
+
+        <TextBlock
+            Grid.Row="6"
+            Grid.Column="5"
+            Text="Te betalen BTW:" />
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="7"
+            Text="Aftrekbare BTW:" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="7"
+            Text="Verschuldigde BTW:" />
+
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="7"
+            Text="Voorschot BTW:" />
+
+        <TextBlock
+            Grid.Row="7"
+            Grid.Column="7"
+            Text="Te betalen BTW:" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK1EigenVermogen"
+            Grid.Row="3"
+            Grid.Column="2"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK1VreemdVermogen"
+            Grid.Row="4"
+            Grid.Column="2"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK1TotaalActief"
+            Grid.Row="6"
+            Grid.Column="2"
+            IsReadOnly="True"
+            Tag="€" />
+        <local:TextBoxWithSymbol
+            x:Name="txtK2TotaalActief"
+            Grid.Row="3"
+            Grid.Column="4"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK2VreemdVermogen"
+            Grid.Row="4"
+            Grid.Column="4"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK2EigenVermogen"
+            Grid.Row="6"
+            Grid.Column="4"
+            IsReadOnly="True"
+            Tag="€" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK3AftrekbareBTW"
+            Grid.Row="3"
+            Grid.Column="6"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK3VerschuldigdeBTW"
+            Grid.Row="4"
+            Grid.Column="6"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK3TeBetalenBTW"
+            Grid.Row="6"
+            Grid.Column="6"
+            IsReadOnly="True"
+            Tag="€" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK4AftrekbareBTW"
+            Grid.Row="3"
+            Grid.Column="8"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK4VerschuldigdeBTW"
+            Grid.Row="4"
+            Grid.Column="8"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK4VoorschotBTW"
+            Grid.Row="5"
+            Grid.Column="8"
+            Tag="€"
+            Text=" €" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtK4TeBetalenBTW"
+            Grid.Row="7"
+            Grid.Column="8"
+            IsReadOnly="True"
+            Tag="€" />
+
+        <Button
+            Name="btnK1TotaalActief"
+            Grid.Row="5"
+            Grid.Column="2"
+            Click="btnK1TotaalActief_Click"
+            Content="Berekenen" />
+
+        <Button
+            Name="btnK2TotaalActief"
+            Grid.Row="5"
+            Grid.Column="4"
+            Click="btnK2TotaalActief_Click"
+            Content="Berekenen" />
+
+        <Button
+            Name="btnK3TeBetalenBTW"
+            Grid.Row="5"
+            Grid.Column="6"
+            Click="btnK3TeBetalenBTW_Click"
+            Content="Berekenen" />
+
+        <Button
+            Name="btnK4TeBetalenBTW"
+            Grid.Row="6"
+            Grid.Column="8"
+            Click="btnK4TeBetalenBTW_Click"
+            Content="Berekenen" />
+
+        <Button
+            Name="btnVulDeWaardenUitDeOefeningIn"
+            Grid.Row="2"
+            Grid.Column="5"
+            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Content="Vul de waarden in" />
+
+        <Button
+            Name="btnVerwijderen"
+            Grid.Row="10"
+            Grid.Column="5"
+            Click="btnVerwijderen_Click"
+            Content="Verwijderen..." />
+
+    </Grid>
+
+</UserControl>

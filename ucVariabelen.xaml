@@ -1,0 +1,262 @@
+﻿<UserControl
+    x:Class="LogikaOefening.ucVariabelen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogikaOefening"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+        <Style BasedOn="{StaticResource {x:Type TextBox}}" TargetType="TextBox">
+            <Setter Property="IsReadOnly" Value="True" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button
+            Name="btnBerekenen"
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnBerekenen_Click"
+            Content="Berekenen..." />
+        <Button
+            Name="btnVerwijderen"
+            Grid.Row="1"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVerwijderen_Click"
+            Content="Verwijderen..." />
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Int16" />
+        <TextBox
+            Name="txtMinInt16"
+            Grid.Row="3"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxInt16"
+            Grid.Row="3"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="10"
+            Text="Int32" />
+        <TextBox
+            Name="txtMinInt32"
+            Grid.Row="4"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxInt32"
+            Grid.Row="4"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Int64" />
+        <TextBox
+            Name="txtMinInt64"
+            Grid.Row="5"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxInt64"
+            Grid.Row="5"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="6"
+            Grid.Column="0"
+            Text="Byte" />
+        <TextBox
+            Name="txtMinByte"
+            Grid.Row="6"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxByte"
+            Grid.Row="6"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="7"
+            Grid.Column="0"
+            Text="Long" />
+        <TextBox
+            Name="txtMinLong"
+            Grid.Row="7"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxLong"
+            Grid.Row="7"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="8"
+            Grid.Column="0"
+            Text="Double" />
+        <TextBox
+            Name="txtMinDouble"
+            Grid.Row="8"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxDouble"
+            Grid.Row="8"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="9"
+            Grid.Column="0"
+            Text="Single" />
+        <TextBox
+            Name="txtMinSingle"
+            Grid.Row="9"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxSingle"
+            Grid.Row="9"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="10"
+            Grid.Column="0"
+            Text="Decimal" />
+        <TextBox
+            Name="txtMinDecimal"
+            Grid.Row="10"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxDecimal"
+            Grid.Row="10"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="11"
+            Grid.Column="0"
+            Text="sByte" />
+        <TextBox
+            Name="txtMinSByte"
+            Grid.Row="11"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxSByte"
+            Grid.Row="11"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="12"
+            Grid.Column="0"
+            Text="Short" />
+        <TextBox
+            Name="txtMinShort"
+            Grid.Row="12"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxShort"
+            Grid.Row="12"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="13"
+            Grid.Column="0"
+            Text="uShort" />
+        <TextBox
+            Name="txtMinUShort"
+            Grid.Row="13"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxUShort"
+            Grid.Row="13"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="14"
+            Grid.Column="0"
+            Text="uInt" />
+        <TextBox
+            Name="txtMinUInt"
+            Grid.Row="14"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxUInt"
+            Grid.Row="14"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="15"
+            Grid.Column="0"
+            Text="uLong" />
+        <TextBox
+            Name="txtMinULong"
+            Grid.Row="15"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxULong"
+            Grid.Row="15"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="16"
+            Grid.Column="0"
+            Text="Float" />
+        <TextBox
+            Name="txtMinFloat"
+            Grid.Row="16"
+            Grid.Column="1" />
+        <TextBox
+            Name="txtMaxFloat"
+            Grid.Row="16"
+            Grid.Column="2" />
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10"
+            HorizontalAlignment="Left"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Variabelen" />
+    </Grid>
+
+
+
+</UserControl>

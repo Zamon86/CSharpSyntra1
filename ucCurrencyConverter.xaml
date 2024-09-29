@@ -1,0 +1,145 @@
+﻿
+<UserControl
+    x:Class="LogikaOefening.ucCurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogikaOefening"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+
+        <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Currency Conventer" />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            Content="Euro bedrag:" />
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="1"
+            Content="Dollar koers:" />
+
+        <Label
+            Grid.Row="5"
+            Grid.Column="1"
+            Content="Britse pond koers:" />
+
+        <Label
+            Grid.Row="7"
+            Grid.Column="1"
+            Content="Dollars:" />
+        <Label
+            Grid.Row="8"
+            Grid.Column="1"
+            Content="Britse pond:" />
+
+        <Button
+            Name="btnBerekenen"
+            Grid.Row="6"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnBerekenen_Click"
+            Content="Berekenen..." />
+
+        <Button
+            Name="btnVerwijderen"
+            Grid.Row="9"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVerwijderen_Click"
+            Content="Verwijderen..." />
+
+        <Button
+            Name="btnVulDeWaardeUitDeOefeningIn"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVulDeWaardeUitDeOefeningIn_Click"
+            Content="Vul de waarden in" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtEuro"
+            Grid.Row="3"
+            Grid.Column="2"
+            Tag="€"
+            Text=" €" />
+
+        <TextBox
+            x:Name="txtDollarKoers"
+            Grid.Row="4"
+            Grid.Column="2" />
+
+        <TextBox
+            x:Name="txtBritsePondKoers"
+            Grid.Row="5"
+            Grid.Column="2" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtDollars"
+            Grid.Row="7"
+            Grid.Column="2"
+            IsReadOnly="True"
+            Tag="$"
+            Text=" $" />
+
+        <local:TextBoxWithSymbol
+            x:Name="txtBritsePond"
+            Grid.Row="8"
+            Grid.Column="2"
+            IsReadOnly="True"
+            Tag="£"
+            Text=" £" />
+
+    </Grid>
+</UserControl>

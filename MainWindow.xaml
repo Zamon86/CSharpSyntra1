@@ -1,0 +1,203 @@
+﻿<Window
+    x:Class="LogikaOefening.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogikaOefening"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1800"
+    Height="1000"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+
+    <Grid x:Name="grdMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer
+            Grid.Row="0"
+            Grid.Column="0"
+            Padding="5"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto">
+
+            <StackPanel>
+
+
+                <Button
+                    Name="btnVariabelen"
+                    Click="btnVariabelen_Click"
+                    Content="Variabelen" />
+
+                <Button
+                    Name="btnSomVanDrieGetallen"
+                    Click="btnSomVanDrieGetallen_Click"
+                    Content="Som van drie getallen" />
+                <Button
+                    Name="btnFactuur"
+                    Click="btnFactuur_Click"
+                    Content="Factuur" />
+                <Button
+                    Name="btnOndernemingMetEigenVermogen"
+                    Click="btnOndernemingMetEigenVermogen_Click"
+                    Content="Onderneming met eigen vermogen" />
+                <Button
+                    Name="btnOmwentelingWiel"
+                    Click="btnOmwentelingWiel_Click"
+                    Content="Omwenteling wiel" />
+                <Button
+                    Name="btnAantalOmwentelingen"
+                    Click="btnAantalOmwentelingen_Click"
+                    Content="Aantal omwentelingen" />
+                <Button
+                    Name="btnCurrencyConverter"
+                    Click="btnCurrencyConverter_Click"
+                    Content="Currency converter" />
+                <Button
+                    Name="btnCelsius_Fahrenheid"
+                    Click="btnCelsius_Fahrenheid_Click"
+                    Content="Temperatuur omzetting" />
+                <Button
+                    Name="btnHandelaarPeeters"
+                    Click="btnHandelaarPeeters_Click"
+                    Content="Handelaar Peeters" />
+                <Button
+                    Name="btnWatKostMijnAugo"
+                    Click="btnWatKostMijnAugo_Click"
+                    Content="Wat kost mijn auto" />
+                <Button
+                    Name="btnGemiddelde"
+                    Click="btnGemiddelde_Click"
+                    Content="Bereken het gemiddelde" />
+                <Button
+                    Name="btnSaldo"
+                    Click="btnSaldo_Click"
+                    Content="Controleer het saldo" />
+                <Button
+                    Name="btnHetGrootsteGetal"
+                    Click="btnHetGrootsteGetal_Click"
+                    Content="Het grootste getal" />
+                <Button
+                    Name="btnVerzekeringsPolis"
+                    Click="btnVerzekeringsPolis_Click"
+                    Content="Verzekerings Polis" />
+                <Button
+                    Name="btnIngelezenEenheidsPrijs"
+                    Click="btnIngelezenEenheidsPrijs_Click"
+                    Content="Ingelezen eenheidsprijs" />
+                <Button
+                    Name="btnGetallenZijnGelijk"
+                    Click="btnGetallenZijnGelijk_Click"
+                    Content="Zijn de twee getallen gelijk" />
+                <Button
+                    Name="btnDrieGetallenVergelijken"
+                    Click="btnDrieGetallenVergelijken_Click"
+                    Content="Drie getallen vergelijken" />
+                <Button
+                    Name="btnEenWillekeurigGetalvergelijken"
+                    Click="btnEenWillekeurigGetalvergelijken_Click"
+                    Content="Een willekeurig getal vergelijken" />
+                <Button
+                    Name="btnHetKleinsteGetal"
+                    Click="btnHetKleinsteGetal_Click"
+                    Content="Het kleinste getal" />
+                <Button
+                    Name="btnHetVerschil"
+                    Click="btnHetVerschil_Click"
+                    Content="Het verschil tussen twee getallen" />
+                <Button
+                    Name="btnControleRekeningNummer"
+                    Click="btnControleRekeningNummer_Click"
+                    Content="Controleer het rekeningnummer" />
+                <Button
+                    Name="btnWinkelKorting"
+                    Click="btnWinkelKorting_Click"
+                    Content="10 % winkel korting" />
+                <Button
+                    Name="btnOpeningBenzineStation"
+                    Click="btnOpeningBenzineStation_Click"
+                    Content="Opening benzinestation" />
+                <Button
+                    Name="btnOpeningBenzineStation2"
+                    Click="btnOpeningBenzineStation2_Click"
+                    Content="Opening benzinestation 2" />
+                <Button
+                    Name="btnBloemenWinkel"
+                    Click="btnBloemenWinkel_Click"
+                    Content="Bloemenwinkel" />
+                <Button
+                    Name="btn10Getallen"
+                    Click="btn10Getallen_Click"
+                    Content="Geef de getallen van 1 tem 10" />
+                <Button
+                    Name="btn10GetallenOmgekeerd"
+                    Click="btn10GetallenOmgekeerd_Click"
+                    Content="Geef de getallen van 10 tem 1" />
+                <Button
+                    Name="btn10KeerDeVoornaam"
+                    Click="btn10KeerDeVoornaam_Click"
+                    Content="Schrijf 10x je voornaam" />
+                <Button
+                    Name="btnGeef10Evengetallen"
+                    Click="btnGeef10Evengetallen_Click"
+                    Content="Geef 10 even getallen" />
+                <Button
+                    Name="btnGemiddeldeVerbruik"
+                    Click="btnGemiddeldeVerbruik_Click"
+                    Content="Gemiddelde verbruik" />
+                <Button
+                    Name="btnVreemdeMuntenOmrekenen"
+                    Click="btnVreemdeMuntenOmrekenen_Click"
+                    Content="Vreemde munten omrekenen" />
+                <Button
+                    Name="btnAantalArtikelen"
+                    Click="btnAantalArtikelen_Click"
+                    Content="Aantal artikelen" />
+                <Button
+                    Name="btnBiljartClub"
+                    Click="btnBiljartClub_Click"
+                    Content="Biljart club" />
+                <Button
+                    Name="btnIntrestOp15Jaar"
+                    Click="btnIntrestOp15Jaar_Click"
+                    Content="Intrest op x-jaren" />
+                <Button
+                    Name="btnPrognoseVerkoop"
+                    Click="btnPrognoseVerkoop_Click"
+                    Content="Prognose verkoop" />
+                <Button
+                    Name="btnTweeNatuurlijkeGetallen"
+                    Click="btnTweeNatuurlijkeGetallen_Click"
+                    Content="Twee natuurlijke getallen" />
+                <Button
+                    Name="btnSomVan5de10de15de"
+                    Click="btnSomVan5de10de15de_Click"
+                    Content="Maak de som van het 5de, 10de en 15de" />
+                <Button
+                    Name="btnExtraGrootsteKleinste"
+                    Click="btnExtraGrootsteKleinste_Click"
+                    Content="Zoek grootste en kleinste getal uit array" />
+                <Button
+                    Name="btnFillingAnArray"
+                    Click="btnFillingAnArray_Click"
+                    Content="Filling an array" />
+                <Button
+                    Name="btnVoidMethodes"
+                    Click="btnVoidMethodes_Click"
+                    Content="Methodes van het type Void" />
+                <Button
+                    Name="btnFuncionMethodes"
+                    Click="btnFuncionMethodes_Click"
+                    Content="Methodes van het type Function" />
+                <Button
+                    Name="btnSpecialMethode"
+                    Click="btnSpecialMethode_Click"
+                    Content="Speciale methodes" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</Window>
