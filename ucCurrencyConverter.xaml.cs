@@ -23,9 +23,9 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? euro = Utils.ConvertStringInputToDouble(txtEuro.Text, txtEuro.Name);
-            double? dollarKoers = Utils.ConvertStringInputToDouble(txtDollarKoers.Text, txtDollarKoers.Name);
-            double? britsePondKoers = Utils.ConvertStringInputToDouble(txtBritsePondKoers.Text, txtBritsePondKoers.Name);
+            double? euro = Utils.ConvertTextBoxInputToDouble(txtEuro);
+            double? dollarKoers = Utils.ConvertTextBoxInputToDouble(txtDollarKoers);
+            double? britsePondKoers = Utils.ConvertTextBoxInputToDouble(txtBritsePondKoers);
             if (euro != null && dollarKoers != null && britsePondKoers != null)
             {
                 txtBritsePond.Text = Math.Round(euro.Value/britsePondKoers.Value, 2).ToString("F2");

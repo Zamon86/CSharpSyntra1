@@ -27,8 +27,8 @@ namespace LogikaOefening
 
         private void btnK1TotaalActief_Click(object sender, RoutedEventArgs e)
         {
-            double? eigenVermogen = Utils.ConvertStringInputToDouble(txtK1EigenVermogen.Text, txtK1EigenVermogen.Name);
-            double? vreemdVermogen = Utils.ConvertStringInputToDouble(txtK1VreemdVermogen.Text, txtK1VreemdVermogen.Name);
+            double? eigenVermogen = Utils.ConvertTextBoxInputToDouble(txtK1EigenVermogen);
+            double? vreemdVermogen = Utils.ConvertTextBoxInputToDouble(txtK1VreemdVermogen);
 
             if (eigenVermogen == null || vreemdVermogen == null)
             {
@@ -42,8 +42,8 @@ namespace LogikaOefening
         private void btnK2TotaalActief_Click(object sender, RoutedEventArgs e)
         {
 
-            double? totaalActief = Utils.ConvertStringInputToDouble(txtK2TotaalActief.Text, txtK2TotaalActief.Name);
-            double? vreemdVermogen = Utils.ConvertStringInputToDouble(txtK2VreemdVermogen.Text, txtK2VreemdVermogen.Name);
+            double? totaalActief = Utils.ConvertTextBoxInputToDouble(txtK2TotaalActief);
+            double? vreemdVermogen = Utils.ConvertTextBoxInputToDouble(txtK2VreemdVermogen);
 
             if (totaalActief == null || vreemdVermogen == null)
             {
@@ -56,8 +56,8 @@ namespace LogikaOefening
 
         private void btnK3TeBetalenBTW_Click(object sender, RoutedEventArgs e)
         {
-            double? aftrekbareBTW = Utils.ConvertStringInputToDouble(txtK3AftrekbareBTW.Text, txtK3AftrekbareBTW.Name);
-            double? verschuldigdeBTW = Utils.ConvertStringInputToDouble(txtK3VerschuldigdeBTW.Text, txtK3VerschuldigdeBTW.Name);
+            double? aftrekbareBTW = Utils.ConvertTextBoxInputToDouble(txtK3AftrekbareBTW);
+            double? verschuldigdeBTW = Utils.ConvertTextBoxInputToDouble(txtK3VerschuldigdeBTW);
 
             if (aftrekbareBTW == null || verschuldigdeBTW == null)
             {
@@ -69,9 +69,9 @@ namespace LogikaOefening
 
         private void btnK4TeBetalenBTW_Click(object sender, RoutedEventArgs e)
         {
-            double? aftrekbareBTW = Utils.ConvertStringInputToDouble(txtK4AftrekbareBTW.Text, txtK4AftrekbareBTW.Name);
-            double? verschuldigdeBTW = Utils.ConvertStringInputToDouble(txtK4VerschuldigdeBTW.Text, txtK4VerschuldigdeBTW.Name);
-            double? voorschootBTW = Utils.ConvertStringInputToDouble(txtK4VoorschotBTW.Text, txtK4VoorschotBTW.Name);
+            double? aftrekbareBTW = Utils.ConvertTextBoxInputToDouble(txtK4AftrekbareBTW);
+            double? verschuldigdeBTW = Utils.ConvertTextBoxInputToDouble(txtK4VerschuldigdeBTW);
+            double? voorschootBTW = Utils.ConvertTextBoxInputToDouble(txtK4VoorschotBTW);
 
             if (aftrekbareBTW == null || verschuldigdeBTW == null || voorschootBTW == null)
             {

@@ -25,10 +25,10 @@ namespace LogikaOefening
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             String naam = txtNaam.Text;
-            int? huidigeTrap = Utils.ConvertStringInputToInteger(txtHuidigeTrap.Text, txtHuidigeTrap.Name);
-            int? maxTrap = Utils.ConvertStringInputToInteger(txtMaxTrap.Text, txtMaxTrap.Name);
-            int? minTrap = Utils.ConvertStringInputToInteger(txtMinTrap.Text, txtMinTrap.Name);
-            int? aantalOngevallenDitJaar = Utils.ConvertStringInputToInteger(txtAantalOngevallenDitJaar.Text, txtAantalOngevallenDitJaar.Name);
+            int? huidigeTrap = Utils.ConvertTextBoxInputToInteger(txtHuidigeTrap);
+            int? maxTrap = Utils.ConvertTextBoxInputToInteger(txtMaxTrap);
+            int? minTrap = Utils.ConvertTextBoxInputToInteger(txtMinTrap);
+            int? aantalOngevallenDitJaar = Utils.ConvertTextBoxInputToInteger(txtAantalOngevallenDitJaar);
             int mijnNieuweTrap;
 
             if (huidigeTrap == null || maxTrap == null || minTrap == null || aantalOngevallenDitJaar == null)

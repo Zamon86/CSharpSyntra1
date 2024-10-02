@@ -31,7 +31,7 @@ namespace LogikaOefening
 
         private void btnBerekenenCF_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? celsius = Utils.ConvertStringInputToDouble(txtCelsius.Text, txtCelsius.Name);
+            double? celsius = Utils.ConvertTextBoxInputToDouble(txtCelsius);
             
             if (celsius != null)
             {
@@ -41,7 +41,7 @@ namespace LogikaOefening
 
         private void btnBerekenenFC_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? fahrenheid = Utils.ConvertStringInputToDouble(txtFahrenheid.Text, txtFahrenheid.Name);
+            double? fahrenheid = Utils.ConvertTextBoxInputToDouble(txtFahrenheid);
 
             if (fahrenheid != null)
             {

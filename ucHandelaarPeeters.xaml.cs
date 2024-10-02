@@ -17,8 +17,8 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
-            double? prijs = Utils.ConvertStringInputToDouble(txtPrijs.Text, txtPrijs.Name);
-            double? btwPercent = Utils.ConvertStringInputToDouble(txtBTWPercent.Text, txtBTWPercent.Name);
+            double? prijs = Utils.ConvertTextBoxInputToDouble(txtPrijs);
+            double? btwPercent = Utils.ConvertTextBoxInputToDouble(txtBTWPercent);
             double kortingBedrag = 0;
             double btwBedrag = 0;
             double totaal = 0;

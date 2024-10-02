@@ -22,8 +22,8 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? diameter = Utils.ConvertStringInputToDouble(txtDiameter.Text, txtDiameter.Name);
-            double? aantalM = Utils.ConvertStringInputToDouble(txtAantalM.Text, txtAantalM.Name);
+            double? diameter = Utils.ConvertTextBoxInputToDouble(txtDiameter);
+            double? aantalM = Utils.ConvertTextBoxInputToDouble(txtAantalM);
             if (diameter != null && aantalM != null)
             {
                 txtAantalOmwentelingen.Text = Math.Round(aantalM.Value / (((diameter.Value * Math.PI) / 100)), 4).ToString();                

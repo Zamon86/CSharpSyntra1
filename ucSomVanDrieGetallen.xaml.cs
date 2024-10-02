@@ -28,9 +28,9 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
-            int? getal1 = Utils.ConvertStringInputToInteger(txtGetal1.Text, txtGetal1.Name);
-            int? getal2 = Utils.ConvertStringInputToInteger(txtGetal2.Text, txtGetal2.Name);
-            int? getal3 = Utils.ConvertStringInputToInteger(txtGetal3.Text, txtGetal3.Name);
+            int? getal1 = Utils.ConvertTextBoxInputToInteger(txtGetal1);
+            int? getal2 = Utils.ConvertTextBoxInputToInteger(txtGetal2);
+            int? getal3 = Utils.ConvertTextBoxInputToInteger(txtGetal3);
 
             if (getal1 == null || getal2 == null || getal3 == null)
             {               

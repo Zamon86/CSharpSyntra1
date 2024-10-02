@@ -7,10 +7,11 @@ namespace LogikaOefening
     public static class Utils    {
         
 
-        public static double? ConvertStringInputToDouble(String input, String nameOfTxtField)
+        public static double? ConvertTextBoxInputToDouble(TextBox tb)
         {
             double parsedDouble;
             String inputTrimmed;
+            string input = tb.Text;
 
             List<string> symbols = new List<string>
             {
@@ -37,7 +38,7 @@ namespace LogikaOefening
 
             if (!double.TryParse(inputTrimmed, out parsedDouble))
             {
-                MessageBox.Show("Ongeldig getal in veld: " + nameOfTxtField);
+                MessageBox.Show("Ongeldig getal in veld: " + tb.Name);
                 return null;
             }
 
@@ -47,13 +48,13 @@ namespace LogikaOefening
             }
         }
 
-        public static int? ConvertStringInputToInteger(String input, String nameOfTxtField)
+        public static int? ConvertTextBoxInputToInteger(TextBox tb)
         {
             int parsedInt;
 
-            if (!int.TryParse(input, out parsedInt))
+            if (!int.TryParse(tb.Text, out parsedInt))
             {
-                MessageBox.Show("Ongeldig getal in veld: " + nameOfTxtField);
+                MessageBox.Show("Ongeldig getal in veld: " + tb.Name);
                 return null;
             }
 

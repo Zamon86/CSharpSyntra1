@@ -16,7 +16,7 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? saldo = Utils.ConvertStringInputToDouble(txtSaldo.Text, txtSaldo.Name);
+            double? saldo = Utils.ConvertTextBoxInputToDouble(txtSaldo);
             if (saldo.HasValue)
             {
                 if (saldo.Value <= -250)

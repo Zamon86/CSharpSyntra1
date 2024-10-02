@@ -43,8 +43,8 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            int? getal1 = Utils.ConvertStringInputToInteger(txtGetal1.Text, txtGetal1.Name);
-            int? getal2 = Utils.ConvertStringInputToInteger(txtGetal2.Text, txtGetal2.Name);
+            int? getal1 = Utils.ConvertTextBoxInputToInteger(txtGetal1);
+            int? getal2 = Utils.ConvertTextBoxInputToInteger(txtGetal2);
 
             if (getal1 == null || getal2 == null)
             {

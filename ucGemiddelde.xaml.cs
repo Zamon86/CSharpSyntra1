@@ -30,9 +30,9 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? januari = Utils.ConvertStringInputToDouble(txtJanuari.Text, txtJanuari.Name);
-            double? juli = Utils.ConvertStringInputToDouble(txtJuli.Text, txtJuli.Name);
-            double? december = Utils.ConvertStringInputToDouble(txtDecember.Text, txtDecember.Name);
+            double? januari = Utils.ConvertTextBoxInputToDouble(txtJanuari);
+            double? juli = Utils.ConvertTextBoxInputToDouble(txtJuli);
+            double? december = Utils.ConvertTextBoxInputToDouble(txtDecember);
 
             if (januari == null || juli == null || december == null)
             {

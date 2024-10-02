@@ -33,7 +33,7 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? prijs = Utils.ConvertStringInputToDouble(txtEenheidsprijs.Text, txtEenheidsprijs.Name);
+            double? prijs = Utils.ConvertTextBoxInputToDouble(txtEenheidsprijs);
             double korting = 10;
 
             if (prijs == null)

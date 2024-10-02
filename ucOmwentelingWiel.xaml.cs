@@ -21,7 +21,7 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? diameter = Utils.ConvertStringInputToDouble(txtDiameter.Text, txtDiameter.Name);
+            double? diameter = Utils.ConvertTextBoxInputToDouble(txtDiameter);
             if (diameter != null)
             {
                 txtOmwentelingInch.Text = Math.Round(((diameter.Value * Math.PI) / 2.54), 4).ToString();

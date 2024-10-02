@@ -46,15 +46,15 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            double? aankoopPrijsAuto = Utils.ConvertStringInputToDouble(txtAankoopPrijsAuto.Text, txtAankoopPrijsAuto.Name);
-            double? btwPercentage = Utils.ConvertStringInputToDouble(txtBTWPercentage.Text, txtBTWPercentage.Name);
-            double? jaarlijkseVerkeersbelasting = Utils.ConvertStringInputToDouble(txtJaarlijkseVerkeersbelasting.Text, txtJaarlijkseVerkeersbelasting.Name);
-            double? afschrijftermijn = Utils.ConvertStringInputToDouble(txtAfschrijftermijn.Text, txtAfschrijftermijn.Name);
-            double? aantalKmJ = Utils.ConvertStringInputToDouble(txtAantalKmJ.Text, txtAantalKmJ.Name);
-            double? prijsLiterDiesel = Utils.ConvertStringInputToDouble(txtPrijsLiterDiesel.Text, txtPrijsLiterDiesel.Name);
-            double? verbruik = Utils.ConvertStringInputToDouble(txtVerbruik.Text, txtVerbruik.Name);
-            double? onderhoud = Utils.ConvertStringInputToDouble(txtOnderhoud.Text, txtOnderhoud.Name);
-            double? jaarlijkseVerzekering = Utils.ConvertStringInputToDouble(txtJaarlijkseVerzekering.Text, txtJaarlijkseVerzekering.Name);
+            double? aankoopPrijsAuto = Utils.ConvertTextBoxInputToDouble(txtAankoopPrijsAuto);
+            double? btwPercentage = Utils.ConvertTextBoxInputToDouble(txtBTWPercentage);
+            double? jaarlijkseVerkeersbelasting = Utils.ConvertTextBoxInputToDouble(txtJaarlijkseVerkeersbelasting);
+            double? afschrijftermijn = Utils.ConvertTextBoxInputToDouble(txtAfschrijftermijn);
+            double? aantalKmJ = Utils.ConvertTextBoxInputToDouble(txtAantalKmJ);
+            double? prijsLiterDiesel = Utils.ConvertTextBoxInputToDouble(txtPrijsLiterDiesel);
+            double? verbruik = Utils.ConvertTextBoxInputToDouble(txtVerbruik);
+            double? onderhoud = Utils.ConvertTextBoxInputToDouble(txtOnderhoud);
+            double? jaarlijkseVerzekering = Utils.ConvertTextBoxInputToDouble(txtJaarlijkseVerzekering);
 
             if (aankoopPrijsAuto == null || btwPercentage == null || jaarlijkseVerkeersbelasting == null ||
             afschrijftermijn == null || aantalKmJ == null || prijsLiterDiesel == null ||

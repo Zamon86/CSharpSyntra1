@@ -29,9 +29,9 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
-            double? prijs = Utils.ConvertStringInputToDouble(txtPrijs.Text, txtPrijs.Name);
-            double? btwPercent = Utils.ConvertStringInputToDouble(txtBTWPercent.Text, txtBTWPercent.Name);
-            double? kortingPercentage = Utils.ConvertStringInputToDouble(txtKortingPercentage.Text, txtKortingPercentage.Name);
+            double? prijs = Utils.ConvertTextBoxInputToDouble(txtPrijs);
+            double? btwPercent = Utils.ConvertTextBoxInputToDouble(txtBTWPercent);
+            double? kortingPercentage = Utils.ConvertTextBoxInputToDouble(txtKortingPercentage);
 
             if (prijs == null || btwPercent == null || kortingPercentage == null)
             {

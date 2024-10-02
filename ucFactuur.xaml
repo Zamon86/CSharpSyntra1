@@ -100,50 +100,50 @@
             x:Name="txtPrijs"
             Grid.Row="3"
             Grid.Column="2"
-            Text=" €"
-            Tag="€" />
+            Tag="€"
+            Text=" €" />
         <local:TextBoxWithSymbol
             x:Name="txtBTWPercent"
             Grid.Row="4"
             Grid.Column="2"
-            Text=" %"
-            Tag="%" />
+            Tag="%"
+            Text=" %" />
         <local:TextBoxWithSymbol
             x:Name="txtKortingPercentage"
             Grid.Row="5"
             Grid.Column="2"
-            Text=" %"
-            Tag="%" />
+            Tag="%"
+            Text=" %" />
         <local:TextBoxWithSymbol
             x:Name="txtHandelskorting"
             Grid.Row="7"
             Grid.Column="2"
-            Tag="€"
-            IsReadOnly="True" />
+            IsReadOnly="True"
+            Tag="€" />
         <local:TextBoxWithSymbol
             x:Name="txtSubTotaal"
             Grid.Row="8"
             Grid.Column="2"
-            Tag="€"
-            IsReadOnly="True" />
+            IsReadOnly="True"
+            Tag="€" />
         <local:TextBoxWithSymbol
             x:Name="txtBTW"
             Grid.Row="9"
             Grid.Column="2"
-            Tag="€"
-            IsReadOnly="True" />
+            IsReadOnly="True"
+            Tag="€" />
         <local:TextBoxWithSymbol
             x:Name="txtTotaal"
             Grid.Row="10"
             Grid.Column="2"
-            Tag="€"
-            IsReadOnly="True" />
+            IsReadOnly="True"
+            Tag="€" />
         <local:TextBoxWithSymbol
             x:Name="txtTotaal2"
             Grid.Row="11"
             Grid.Column="2"
-            Tag="€"
-            IsReadOnly="True" />
+            IsReadOnly="True"
+            Tag="€" />
         <Button
             Name="btnVerwijderen"
             Grid.Row="13"

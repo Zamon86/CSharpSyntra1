@@ -8,6 +8,113 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="1000"
     d:DesignWidth="1000"
-    mc:Ignorable="d"
-    Background="#669BBC">
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+
+        <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Drie getallen vergelijken" />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            Content="Getal 1:" />
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="1"
+            Content="Getal 2:" />
+
+        <Label
+            Grid.Row="7"
+            Grid.Column="1"
+            Content="Resultaat:" />
+
+        <Button
+            Name="btnBerekenen"
+            Grid.Row="6"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnBerekenen_Click"
+            Content="Berekenen..." />
+
+        <Button
+            Name="btnVerwijderen"
+            Grid.Row="8"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVerwijderen_Click"
+            Content="Verwijderen..." />
+
+        <Button
+            Name="btnVulDeWaardenUitDeOefeningIn"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Content="Vul de random waarden in" />
+
+        <TextBox
+            x:Name="txtGetal1"
+            Grid.Row="3"
+            Grid.Column="2" />
+
+        <TextBox
+            x:Name="txtGetal2"
+            Grid.Row="4"
+            Grid.Column="2" />
+
+        <TextBox
+            x:Name="txtResultaat"
+            Grid.Row="7"
+            Grid.Column="2"
+            IsReadOnly="True" />
+
+    </Grid>
+
 </UserControl>

@@ -56,7 +56,7 @@ namespace LogikaOefening
             {
                 if (tb.Name.Contains("txtGetal"))
                 {
-                    double? getal = Utils.ConvertStringInputToDouble(tb.Text, tb.Name);
+                    double? getal = Utils.ConvertTextBoxInputToDouble(tb);
                     if (getal.HasValue) 
                     {
                         getalen.Add(getal.Value);
