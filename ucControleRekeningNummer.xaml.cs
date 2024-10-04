@@ -1,5 +1,6 @@
 
 using System;
+using System.Configuration;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,23 +14,21 @@ namespace LogikaOefening
         public ucControleRekeningNummer()
         {
             InitializeComponent();
-
             listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
         public List<TextBox> listTB { get; private set; }
 
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeRandomWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random rnd = new Random();
             string group1 = string.Empty;
             string group2 = string.Empty; ;
             string group3 = string.Empty; ;
 
-            if (rnd.Next(2) == 1)
-            {
-                MessageBox.Show("CorrectNUmber");
+            if (rnd.Next(2) == 1)            {
+                
                 int g3 = rnd.Next(1, 98);
 
                 if (g3 < 10)
@@ -91,7 +90,24 @@ namespace LogikaOefening
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            string group12 = txtGetal1.Text + txtGetal2.Text;            
+            string group3 = txtGetal3.Text;
+            long group12int = long.Parse(group12);
+            int restDeling = (int)(group12int % 97);
 
+            if (restDeling == 0)
+            {
+                restDeling = 97;
+            }
+
+            if (Int32.Parse(group3) == restDeling)
+            {
+                txtResultaat.Text = "Rekeningnummer is juist";
+            }
+            else
+            {
+                txtResultaat.Text = "Rekeningnummer is niet juist";
+            }
         }
     }
 }

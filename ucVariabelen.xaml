@@ -8,18 +8,18 @@
     d:DesignHeight="1000"
     d:DesignWidth="1000"
     mc:Ignorable="d">
+
     <UserControl.Resources>
-        <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Right" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-        </Style>
+
         <Style BasedOn="{StaticResource {x:Type TextBox}}" TargetType="TextBox">
+
             <Setter Property="IsReadOnly" Value="True" />
+
         </Style>
+
     </UserControl.Resources>
 
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
@@ -47,6 +47,14 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Variabelen" />
+
         <Button
             Name="btnBerekenen"
             Grid.Row="1"
@@ -64,197 +72,216 @@
             Click="btnVerwijderen_Click"
             Content="Verwijderen..." />
 
-        <TextBlock
+        <Label
             Grid.Row="3"
             Grid.Column="0"
-            Text="Int16" />
+            Content="Int16" />
+
         <TextBox
             Name="txtMinInt16"
             Grid.Row="3"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxInt16"
             Grid.Row="3"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="4"
             Grid.Column="0"
-            Margin="10"
-            Text="Int32" />
+            Content="Int32" />
+
         <TextBox
             Name="txtMinInt32"
             Grid.Row="4"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxInt32"
             Grid.Row="4"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="5"
             Grid.Column="0"
-            Text="Int64" />
+            Content="Int64" />
+
         <TextBox
             Name="txtMinInt64"
             Grid.Row="5"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxInt64"
             Grid.Row="5"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="6"
             Grid.Column="0"
-            Text="Byte" />
+            Content="Byte" />
+
         <TextBox
             Name="txtMinByte"
             Grid.Row="6"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxByte"
             Grid.Row="6"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="7"
             Grid.Column="0"
-            Text="Long" />
+            Content="Long" />
+
         <TextBox
             Name="txtMinLong"
             Grid.Row="7"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxLong"
             Grid.Row="7"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="8"
             Grid.Column="0"
-            Text="Double" />
+            Content="Double" />
+
         <TextBox
             Name="txtMinDouble"
             Grid.Row="8"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxDouble"
             Grid.Row="8"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="9"
             Grid.Column="0"
-            Text="Single" />
+            Content="Single" />
+
         <TextBox
             Name="txtMinSingle"
             Grid.Row="9"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxSingle"
             Grid.Row="9"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="10"
             Grid.Column="0"
-            Text="Decimal" />
+            Content="Decimal" />
+
         <TextBox
             Name="txtMinDecimal"
             Grid.Row="10"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxDecimal"
             Grid.Row="10"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="11"
             Grid.Column="0"
-            Text="sByte" />
+            Content="sByte" />
+
         <TextBox
             Name="txtMinSByte"
             Grid.Row="11"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxSByte"
             Grid.Row="11"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="12"
             Grid.Column="0"
-            Text="Short" />
+            Content="Short" />
+
         <TextBox
             Name="txtMinShort"
             Grid.Row="12"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxShort"
             Grid.Row="12"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="13"
             Grid.Column="0"
-            Text="uShort" />
+            Content="uShort" />
+
         <TextBox
             Name="txtMinUShort"
             Grid.Row="13"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxUShort"
             Grid.Row="13"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="14"
             Grid.Column="0"
-            Text="uInt" />
+            Content="uInt" />
+
         <TextBox
             Name="txtMinUInt"
             Grid.Row="14"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxUInt"
             Grid.Row="14"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="15"
             Grid.Column="0"
-            Text="uLong" />
+            Content="uLong" />
+
         <TextBox
             Name="txtMinULong"
             Grid.Row="15"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxULong"
             Grid.Row="15"
             Grid.Column="2" />
 
-        <TextBlock
+        <Label
             Grid.Row="16"
             Grid.Column="0"
-            Text="Float" />
+            Content="Float" />
+
         <TextBox
             Name="txtMinFloat"
             Grid.Row="16"
             Grid.Column="1" />
+
         <TextBox
             Name="txtMaxFloat"
             Grid.Row="16"
             Grid.Column="2" />
 
-        <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            Margin="10"
-            HorizontalAlignment="Left"
-            FontSize="30"
-            FontWeight="Bold"
-            Text="Variabelen" />
     </Grid>
 
 

@@ -9,15 +9,6 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <UserControl.Resources>
-
-        <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="Label">
-            <Setter Property="HorizontalAlignment" Value="Right" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-        </Style>
-
-    </UserControl.Resources>
-
     <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -48,13 +39,13 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="4"
             Margin="10"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             FontSize="30"
             FontWeight="Bold"
-            Text="Drie getallen vergelijken" />
+            Text="Controle rekeningnummer" />
 
         <Label
             Grid.Row="3"
@@ -105,7 +96,7 @@
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Click="btnVulDeRandomWaardenIn_Click"
             Content="Vul de random waarden in" />
 
         <TextBox

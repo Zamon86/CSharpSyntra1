@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:LogikaOefening"
     StartupUri="MainWindow.xaml">
+
     <Application.Resources>
 
         <Style TargetType="Grid">
@@ -56,7 +57,7 @@
             <Setter Property="Foreground" Value="#0D0D0D" />
             <Setter Property="FontSize" Value="20" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
             <Setter Property="Padding" Value="5" />
         </Style>
 
@@ -134,7 +135,11 @@
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="#0D0D0D" />
             <Setter Property="FontSize" Value="20" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="10" />
         </Style>
 
     </Application.Resources>
+
 </Application>

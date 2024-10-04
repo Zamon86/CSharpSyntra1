@@ -156,122 +156,102 @@ namespace LogikaOefening
 
         private void btnOpeningBenzineStation_Click(object sender, RoutedEventArgs e)
         {
-            ucOpeningBenzineStation _ucOpeningBenzineStation = new ucOpeningBenzineStation();
-            OpenMyUserControl(_ucOpeningBenzineStation);
+            
         }
 
         private void btnOpeningBenzineStation2_Click(object sender, RoutedEventArgs e)
         {
-            ucOpeningBenzineStation2 _ucOpeningBenzineStation2 = new ucOpeningBenzineStation2();
-            OpenMyUserControl(_ucOpeningBenzineStation2);
+            
         }
 
         private void btnBloemenWinkel_Click(object sender, RoutedEventArgs e)
         {
-            ucBloemenWinkel _ucBloemenWinkel = new ucBloemenWinkel();
-            OpenMyUserControl(_ucBloemenWinkel);
+            
         }
 
         private void btn10Getallen_Click(object sender, RoutedEventArgs e)
         {
-            uc10Getallen _uc10Getallen = new uc10Getallen();
-            OpenMyUserControl(_uc10Getallen);
+            
         }
 
         private void btn10GetallenOmgekeerd_Click(object sender, RoutedEventArgs e)
         {
-            uc10GetallenOmgekeerd _uc10GetallenOmgekeerd = new uc10GetallenOmgekeerd();
-            OpenMyUserControl(_uc10GetallenOmgekeerd);
+            
         }
 
         private void btn10KeerDeVoornaam_Click(object sender, RoutedEventArgs e)
         {
-            uc10KeerDeVoornaam _uc10KeerDeVoornaam = new uc10KeerDeVoornaam();
-            OpenMyUserControl(_uc10KeerDeVoornaam);
+            
         }
 
         private void btnGeef10Evengetallen_Click(object sender, RoutedEventArgs e)
         {
-            ucGeef10Evengetallen _ucGeef10Evengetallen = new ucGeef10Evengetallen();
-            OpenMyUserControl(_ucGeef10Evengetallen);
+            
         }
 
         private void btnGemiddeldeVerbruik_Click(object sender, RoutedEventArgs e)
         {
-            ucGemiddeldeVerbruik _ucGemiddeldeVerbruik = new ucGemiddeldeVerbruik();
-            OpenMyUserControl(_ucGemiddeldeVerbruik);
+           
         }
 
         private void btnVreemdeMuntenOmrekenen_Click(object sender, RoutedEventArgs e)
         {
-            ucVreemdeMuntenOmrekenen _ucVreemdeMuntenOmrekenen = new ucVreemdeMuntenOmrekenen();
-            OpenMyUserControl(_ucVreemdeMuntenOmrekenen);
+           
         }
 
         private void btnAantalArtikelen_Click(object sender, RoutedEventArgs e)
         {
-            ucAantalArtikelen _ucAantalArtikelen = new ucAantalArtikelen();
-            OpenMyUserControl(_ucAantalArtikelen);
+          
         }
 
         private void btnBiljartClub_Click(object sender, RoutedEventArgs e)
         {
-            ucBiljartClub _ucBiljartClub = new ucBiljartClub();
-            OpenMyUserControl(_ucBiljartClub);
+            
         }
 
         private void btnIntrestOp15Jaar_Click(object sender, RoutedEventArgs e)
         {
-            ucIntrestOp15Jaar _ucIntrestOp15Jaar = new ucIntrestOp15Jaar();
-            OpenMyUserControl(_ucIntrestOp15Jaar);
+           
         }
 
         private void btnPrognoseVerkoop_Click(object sender, RoutedEventArgs e)
         {
-            ucPrognoseVerkoop _ucPrognoseVerkoop = new ucPrognoseVerkoop();
-            OpenMyUserControl(_ucPrognoseVerkoop);
+           
         }
 
         private void btnTweeNatuurlijkeGetallen_Click(object sender, RoutedEventArgs e)
         {
-            ucTweeNatuurlijkeGetallen _ucTweeNatuurlijkeGetallen = new ucTweeNatuurlijkeGetallen();
-            OpenMyUserControl(_ucTweeNatuurlijkeGetallen);
+            
         }
 
         private void btnSomVan5de10de15de_Click(object sender, RoutedEventArgs e)
         {
-            ucSomVan5de10de15de _ucSomVan5de10de15de = new ucSomVan5de10de15de();
-            OpenMyUserControl(_ucSomVan5de10de15de);
+           
         }
 
         private void btnExtraGrootsteKleinste_Click(object sender, RoutedEventArgs e)
         {
-            ucExtraGrootsteKleinste _ucExtraGrootsteKleinste = new ucExtraGrootsteKleinste();
-            OpenMyUserControl(_ucExtraGrootsteKleinste);
+            
         }
 
         private void btnFillingAnArray_Click(object sender, RoutedEventArgs e)
         {
-            ucFillingAnArray _ucFillingAnArray = new ucFillingAnArray();
-            OpenMyUserControl(_ucFillingAnArray);
+          
         }
 
         private void btnVoidMethodes_Click(object sender, RoutedEventArgs e)
         {
-            ucVoidMethodes _ucVoidMethodes = new ucVoidMethodes();
-            OpenMyUserControl(_ucVoidMethodes);
+            
         }
 
         private void btnFuncionMethodes_Click(object sender, RoutedEventArgs e)
         {
-            ucFuncionMethodes _ucFuncionMethodes = new ucFuncionMethodes();
-            OpenMyUserControl(_ucFuncionMethodes);
+            
         }
 
         private void btnSpecialMethode_Click(object sender, RoutedEventArgs e)
         {
-            ucSpecialMethode _ucSpecialMethode = new ucSpecialMethode();
-            OpenMyUserControl(_ucSpecialMethode);
+            
         }
 
         private void OpenMyUserControl(UserControl myUC)

@@ -9,15 +9,6 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <UserControl.Resources>
-
-        <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="Label">
-            <Setter Property="HorizontalAlignment" Value="Right" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-        </Style>
-
-    </UserControl.Resources>
-
     <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

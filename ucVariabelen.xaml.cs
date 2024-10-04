@@ -23,7 +23,10 @@ namespace LogikaOefening
         public ucVariabelen()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }      
+
+        public List<TextBox> listTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
@@ -60,34 +63,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            txtMinInt16.Text = String.Empty;
-            txtMaxInt16.Text = String.Empty;
-            txtMinInt32.Text = String.Empty;
-            txtMaxInt32.Text = String.Empty;
-            txtMinInt64.Text = String.Empty;
-            txtMaxInt64.Text = String.Empty;
-            txtMinByte.Text = String.Empty;
-            txtMaxByte.Text = String.Empty;
-            txtMinLong.Text = String.Empty;
-            txtMaxLong.Text = String.Empty;
-            txtMinDouble.Text = String.Empty;
-            txtMaxDouble.Text = String.Empty;
-            txtMinSingle.Text = String.Empty;
-            txtMaxSingle.Text = String.Empty;
-            txtMinDecimal.Text = String.Empty;
-            txtMaxDecimal.Text = String.Empty;
-            txtMinSByte.Text = String.Empty;
-            txtMaxSByte.Text = String.Empty;
-            txtMinShort.Text = String.Empty;
-            txtMaxShort.Text = String.Empty;
-            txtMinUShort.Text = String.Empty;
-            txtMaxUShort.Text = String.Empty;
-            txtMinUInt.Text = String.Empty;
-            txtMaxUInt.Text = String.Empty;
-            txtMinULong.Text = String.Empty;
-            txtMaxULong.Text = String.Empty;
-            txtMinFloat.Text = String.Empty;
-            txtMaxFloat.Text = String.Empty;
+            
         }
     }
 }
