@@ -7,17 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="1000"
     d:DesignWidth="1000"
-    mc:Ignorable="d">
+    mc:Ignorable="d">    
 
-    <UserControl.Resources>
-        <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Right" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-        </Style>
-    </UserControl.Resources>
-
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
@@ -47,45 +39,45 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="4"            
             FontSize="30"
             FontWeight="Bold"
             Text="Factuur" />
 
-        <TextBlock
+        <Label
             Grid.Row="3"
             Grid.Column="1"
-            Text="Prijs:" />
+            Content="Prijs:" />
 
-        <TextBlock
+        <Label
             Grid.Row="4"
             Grid.Column="1"
-            Text="BTW percentage:" />
+            Content="BTW percentage:" />
 
-        <TextBlock
+        <Label
             Grid.Row="5"
             Grid.Column="1"
-            Text="Procent handelskorting:" />
+            Content="Procent handelskorting:" />
 
-        <TextBlock
+        <Label
             Grid.Row="7"
             Grid.Column="1"
-            Text="Handelskorting:" />
-        <TextBlock
+            Content="Handelskorting:" />
+        
+        <Label
             Grid.Row="8"
             Grid.Column="1"
-            Text="Sub totaal:" />
-        <TextBlock
+            Content="Sub totaal:" />
+        
+        <Label
             Grid.Row="9"
             Grid.Column="1"
-            Text="BTW:" />
-        <TextBlock
+            Content="BTW:" />
+        
+        <Label
             Grid.Row="10"
             Grid.Column="1"
-            Text="Totaal:" />
+            Content="Totaal:" />
 
         <Button
             Name="btnBerekenen"
@@ -102,48 +94,56 @@
             Grid.Column="2"
             Tag="€"
             Text=" €" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtBTWPercent"
             Grid.Row="4"
             Grid.Column="2"
             Tag="%"
             Text=" %" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtKortingPercentage"
             Grid.Row="5"
             Grid.Column="2"
             Tag="%"
             Text=" %" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtHandelskorting"
             Grid.Row="7"
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtSubTotaal"
             Grid.Row="8"
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtBTW"
             Grid.Row="9"
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtTotaal"
             Grid.Row="10"
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtTotaal2"
             Grid.Row="11"
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <Button
             Name="btnVerwijderen"
             Grid.Row="13"
@@ -154,14 +154,13 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeRandomWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Click="btnVulDeRandomWaardenIn_Click"
             Content="Vul de waarden in" />
-
     </Grid>
 
 </UserControl>

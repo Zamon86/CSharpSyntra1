@@ -1,16 +1,13 @@
-
-using System;
 using System.Windows.Controls;
-using System.Windows.Controls.Ribbon;
 
 namespace LogikaOefening
 {
     /// <summary>
     /// Interaction logic for ucWinkelKorting.xaml
     /// </summary>
-    public partial class ucWinkelKorting : UserControl
+    public partial class ucKledingWinkel : UserControl
     {
-        public ucWinkelKorting()
+        public ucKledingWinkel()
         {
             InitializeComponent();
             listTB = [.. mainGrid.Children.OfType<TextBox>()];
@@ -31,8 +28,6 @@ namespace LogikaOefening
 
             double kortingsBedrag = kortingsPercentage.Value * bedrag.Value / 100;
 
-
-
             if (kortingsBedrag > 15)
             {
                 txtResultaat.Text = string.Format("Korting is {0}€", kortingsBedrag);
@@ -40,23 +35,27 @@ namespace LogikaOefening
             else
             {
                 int bonBedrag = (int)(Math.Floor(kortingsBedrag / 5) * 5);
-                txtResultaat.Text = string.Format("Er wordt een kortingsbon gegeven van {0}€", bonBedrag);
+                if (bonBedrag == 0)
+                {
+                    txtResultaat.Text = "Er wordt geen kortingsbon gegeven";
+                }
+                else 
+                {
+                    txtResultaat.Text = string.Format("Er wordt een kortingsbon gegeven van {0}€", bonBedrag);
+                }               
             }
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (var tb in listTB)
-            {
-                tb.Text = String.Empty;
-            }
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random rnd = new Random();
-            txtBedrag.Text = rnd.Next(30, 500).ToString();
-            txtKortingspercentage.Text = rnd.Next(10, 20).ToString();
+            txtBedrag.Text = rnd.Next(30, 250).ToString();
+            txtKortingspercentage.Text = rnd.Next(5, 15).ToString();
         }
     }
 }

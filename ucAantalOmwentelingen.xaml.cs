@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,13 +10,9 @@ namespace LogikaOefening
         public ucAantalOmwentelingen()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-
-        private void btnVulDeWaardeUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            txtDiameter.Text = "16";
-            txtAantalM.Text = "100";
-        }
+        public List<TextBox> listTB { get; private set; }        
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -28,17 +22,18 @@ namespace LogikaOefening
             {
                 txtAantalOmwentelingen.Text = Math.Round(aantalM.Value / (((diameter.Value * Math.PI) / 100)), 4).ToString();                
             }
-
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtDiameter.Text = String.Empty;
-            txtAantalM.Text = String.Empty;
-            txtAantalOmwentelingen.Text = String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
-        
-
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random();
+            txtDiameter.Text = random.Next(10, 51).ToString();
+            txtAantalM.Text = random.Next(50, 101).ToString();
+        }
     }
 }

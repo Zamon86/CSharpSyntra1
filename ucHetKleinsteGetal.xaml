@@ -1,4 +1,3 @@
-
 <UserControl
     x:Class="LogikaOefening.ucHetKleinsteGetal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -10,11 +9,11 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <Grid x:Name="MainGrid">
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="4*" />
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -40,13 +39,10 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="2"            
             FontSize="30"
             FontWeight="Bold"
-            Text="Het kleinste getal" />
+            Text="Bereken het kleinste getal" />
 
         <Label
             Grid.Row="3"
@@ -88,7 +84,6 @@
             Grid.Column="1"
             Content="Getal 8:" />
 
-
         <Label
             Grid.Row="12"
             Grid.Column="1"
@@ -113,51 +108,58 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
-            Content="Vul de random waarden in" />
+            Click="btnVulDeWaardenIn_Click"
+            Content="Vul de waarden in" />
 
         <TextBox
             Name="txtGetal1"
             Grid.Row="3"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal2"
             Grid.Row="4"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal3"
             Grid.Row="5"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal4"
             Grid.Row="6"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal5"
             Grid.Row="7"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal6"
             Grid.Row="8"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal7"
             Grid.Row="9"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtGetal8"
             Grid.Row="10"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtHetKleinsteGetal"
             Grid.Row="12"
             Grid.Column="2"
             IsReadOnly="True" />
     </Grid>
-
 </UserControl>

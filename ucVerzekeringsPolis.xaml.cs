@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,12 +10,7 @@ namespace LogikaOefening
         public ucVerzekeringsPolis()
         {
             InitializeComponent();
-            listTB = new List<TextBox>();
-            foreach (TextBox tb in MainGrid.Children.OfType<TextBox>())
-            {
-                listTB.Add(tb);
-            }
-
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
         public List<TextBox> listTB { get; private set; }
@@ -47,7 +40,8 @@ namespace LogikaOefening
                     mijnNieuweTrap = huidigeTrap.Value;
                 }
 
-            } else if (aantalOngevallenDitJaar == 1) 
+            }
+            else if (aantalOngevallenDitJaar == 1)
             {
                 if (huidigeTrap >= maxTrap - 2)
                 {
@@ -57,7 +51,8 @@ namespace LogikaOefening
                 {
                     mijnNieuweTrap = huidigeTrap.Value + 2;
                 }
-            } else
+            }
+            else
             {
                 if (huidigeTrap == maxTrap || huidigeTrap - 2 + (aantalOngevallenDitJaar - 1) * 3 > maxTrap)
                 {
@@ -70,27 +65,59 @@ namespace LogikaOefening
             }
 
             txtMijnNieuweTrap.Text = mijnNieuweTrap.ToString();
-
         }
 
 
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTB)
-            {
-                tb.Text = String.Empty;
-            }
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtNaam.Text = "Piotr";
-            txtHuidigeTrap.Text = "10";
-            txtMaxTrap.Text = "18";
-            txtMinTrap.Text = "1";
-            txtAantalOngevallenDitJaar.Text = "1";
+            Random random = new Random();
+            int maxTrap = 18;
+            int minTrap = 1;
 
+
+            txtNaam.Text = "Piotr";
+            txtHuidigeTrap.Text = random.Next(minTrap, maxTrap + 1).ToString();
+            txtMaxTrap.Text = maxTrap.ToString();
+            txtMinTrap.Text = minTrap.ToString();
+            txtAantalOngevallenDitJaar.Text = GenerateAantalOngevallen().ToString();
+
+        }
+
+        static private int GenerateAantalOngevallen()
+        {
+            Random random = new Random();
+            int randomValue = random.Next(1, 101);
+
+            switch (randomValue)
+            {
+                case <= 60:
+                    return 0;
+                case <= 80:
+                    return 1;
+                case <= 90:
+                    return 2;
+                case <= 95:
+                    return 3;
+                case <= 96:
+                    return 4;
+                case <= 97:
+                    return 5;
+                case <= 98:
+                    return 6;
+                case <= 99:
+                    return 7;
+                case <= 100:
+                    return 8;
+                default:
+                    return 0;
+
+            }
         }
     }
 }

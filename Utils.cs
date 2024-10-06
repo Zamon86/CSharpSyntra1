@@ -15,6 +15,7 @@ namespace LogikaOefening
 
             List<string> symbols = new List<string>
             {
+                "€/l",
                 "km",
                 "€",
                 "%",
@@ -24,8 +25,7 @@ namespace LogikaOefening
                 "°F",
                 "°C",
                 "j",
-                "l"
-                
+                "l"                
             };
 
             foreach (String symbol in symbols)
@@ -61,6 +61,14 @@ namespace LogikaOefening
             else
             {
                 return parsedInt;
+            }
+        }
+
+        public static void VerwijderenTextInTextBoxes(List<TextBox> listTB)
+        {
+            foreach (TextBox tb in listTB)
+            {
+                tb.Text = String.Empty;
             }
         }
     }

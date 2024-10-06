@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -7,9 +5,9 @@ namespace LogikaOefening
     /// <summary>
     /// Interaction logic for ucHetVerschil.xaml
     /// </summary>
-    public partial class ucHetVerschil : UserControl
+    public partial class ucBerekenHetVerschil : UserControl
     {
-        public ucHetVerschil()
+        public ucBerekenHetVerschil()
         {
             InitializeComponent();
 
@@ -19,20 +17,17 @@ namespace LogikaOefening
 
         public List<TextBox> listTb { get; private set; }
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random random = new Random();
-            txtGetal1.Text = random.Next(100).ToString();
-            txtGetal2.Text = random.Next(100).ToString();
+            txtGetal1.Text = random.Next(501).ToString();
+            txtGetal2.Text = random.Next(501).ToString();
 
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTb)
-            {
-                tb.Text = String.Empty;
-            }
+            Utils.VerwijderenTextInTextBoxes(listTb);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -42,10 +37,16 @@ namespace LogikaOefening
 
             if (getal1.HasValue && getal2.HasValue)
             {
-                txtResultaat.Text = Math.Abs(getal1.Value - getal2.Value).ToString();
-            }
-
-            
+                if (getal1 == getal2)
+                {
+                    txtResultaat.Text = "De getallen zijn gelijk.";
+                }
+                else 
+                {
+                    txtResultaat.Text = Math.Abs(getal1.Value - getal2.Value).ToString();
+                }
+                
+            }            
         }
     }
 }

@@ -1,13 +1,5 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LogikaOefening
 {
@@ -40,16 +32,16 @@ namespace LogikaOefening
             OpenMyUserControl(_ucFactur);
         }
 
-        private void btnOndernemingMetEigenVermogen_Click(object sender, RoutedEventArgs e)
+        private void btnOnderneming_EigenVermogen_Click(object sender, RoutedEventArgs e)
         {
-            ucOndernemingMetEigenVermogen _ucOndernemingMetEigenVermogen = new ucOndernemingMetEigenVermogen();
-            OpenMyUserControl(_ucOndernemingMetEigenVermogen);
+            ucOnderneming_EigenVermogen _ucOnderneming_EigenVermogen = new ucOnderneming_EigenVermogen();
+            OpenMyUserControl(_ucOnderneming_EigenVermogen);
         }
 
-        private void btnOmwentelingWiel_Click(object sender, RoutedEventArgs e)
+        private void btnWielOmwentelingen_Click(object sender, RoutedEventArgs e)
         {
-            ucOmwentelingWiel _ucOmwentelingWiel = new ucOmwentelingWiel();
-            OpenMyUserControl(_ucOmwentelingWiel);
+            ucWielOmwentelingen _ucWielOmwentelingen = new ucWielOmwentelingen();
+            OpenMyUserControl(_ucWielOmwentelingen);
         }
 
         private void btnAantalOmwentelingen_Click(object sender, RoutedEventArgs e)
@@ -114,20 +106,20 @@ namespace LogikaOefening
 
         private void btnGetallenZijnGelijk_Click(object sender, RoutedEventArgs e)
         {
-            ucGetallenZijnGelijk _ucGetallenZijnGelijk = new ucGetallenZijnGelijk();
-            OpenMyUserControl(_ucGetallenZijnGelijk);
+            ucTweeGetallenGelijk _ucTweeGetallenGelijk = new ucTweeGetallenGelijk();
+            OpenMyUserControl(_ucTweeGetallenGelijk);
         }
 
-        private void btnDrieGetallenVergelijken_Click(object sender, RoutedEventArgs e)
+        private void btnDrieGetallen_Click(object sender, RoutedEventArgs e)
         {
-            ucDrieGetallenVergelijken _ucDrieGetallenVergelijken = new ucDrieGetallenVergelijken();
-            OpenMyUserControl(_ucDrieGetallenVergelijken);
+            ucDrieGetallen _ucDrieGetallen = new ucDrieGetallen();
+            OpenMyUserControl(_ucDrieGetallen);
         }
 
         private void btnEenWillekeurigGetalvergelijken_Click(object sender, RoutedEventArgs e)
         {
-            ucEenWillekeurigGetalvergelijken _ucEENWillekeurigGetalvergelijken = new ucEenWillekeurigGetalvergelijken();
-            OpenMyUserControl(_ucEENWillekeurigGetalvergelijken);
+            ucVergelijkWillekeurigGetal _ucVergelijkWillekeurigGetal = new ucVergelijkWillekeurigGetal();
+            OpenMyUserControl(_ucVergelijkWillekeurigGetal);
         }
 
         private void btnHetKleinsteGetal_Click(object sender, RoutedEventArgs e)
@@ -138,8 +130,8 @@ namespace LogikaOefening
 
         private void btnHetVerschil_Click(object sender, RoutedEventArgs e)
         {
-            ucHetVerschil _ucHetVerschil = new ucHetVerschil();
-            OpenMyUserControl(_ucHetVerschil);
+            ucBerekenHetVerschil _ucBerekenHetVerschil = new ucBerekenHetVerschil();
+            OpenMyUserControl(_ucBerekenHetVerschil);
         }
 
         private void btnControleRekeningNummer_Click(object sender, RoutedEventArgs e)
@@ -150,13 +142,14 @@ namespace LogikaOefening
 
         private void btnWinkelKorting_Click(object sender, RoutedEventArgs e)
         {
-            ucWinkelKorting _ucWinkelKorting = new ucWinkelKorting();
-            OpenMyUserControl(_ucWinkelKorting);
+            ucKledingWinkel _ucKledingWinkel = new ucKledingWinkel();
+            OpenMyUserControl(_ucKledingWinkel);
         }
 
         private void btnOpeningBenzineStation_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucOpeningBenzineStation ucOpeningBenzineStation = new ucOpeningBenzineStation();
+            OpenMyUserControl(ucOpeningBenzineStation);
         }
 
         private void btnOpeningBenzineStation2_Click(object sender, RoutedEventArgs e)

@@ -41,13 +41,13 @@
                     Click="btnFactuur_Click"
                     Content="Factuur" />
                 <Button
-                    Name="btnOndernemingMetEigenVermogen"
-                    Click="btnOndernemingMetEigenVermogen_Click"
+                    Name="btnOnderneming_EigenVermogen"
+                    Click="btnOnderneming_EigenVermogen_Click"
                     Content="Onderneming met eigen vermogen" />
                 <Button
-                    Name="btnOmwentelingWiel"
-                    Click="btnOmwentelingWiel_Click"
-                    Content="Omwenteling wiel" />
+                    Name="btnWielOmwentelingen"
+                    Click="btnWielOmwentelingen_Click"
+                    Content="Wiel Omwentelingen" />
                 <Button
                     Name="btnAantalOmwentelingen"
                     Click="btnAantalOmwentelingen_Click"
@@ -94,7 +94,7 @@
                     Content="Zijn de twee getallen gelijk" />
                 <Button
                     Name="btnDrieGetallenVergelijken"
-                    Click="btnDrieGetallenVergelijken_Click"
+                    Click="btnDrieGetallen_Click"
                     Content="Drie getallen vergelijken" />
                 <Button
                     Name="btnEenWillekeurigGetalvergelijken"

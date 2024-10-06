@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,7 +10,9 @@ namespace LogikaOefening
         public ucSaldo()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
+        public List<TextBox> listTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -33,20 +33,15 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtBoodschap.Text = string.Empty;
-            txtSaldo.Text = string.Empty;
-        }
+            Utils.VerwijderenTextInTextBoxes(listTB);
+        }        
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardeIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Random  random = new Random();
-            double maxValue = 500;
-            double minValue = -500;
-
-            double randomValue = random.NextDouble() * (maxValue - minValue) + minValue;
+            Random random = new Random();  
+            double randomValue = random.NextDouble() * (250 - (-500)) + (-500);
 
             txtSaldo.Text = Math.Round(randomValue, 2).ToString("F2");
-            
         }
     }
 }

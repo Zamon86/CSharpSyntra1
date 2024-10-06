@@ -9,12 +9,12 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -39,10 +39,7 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="4"            
             FontSize="30"
             FontWeight="Bold"
             Text="Ingelezen eenheidsprijs" />
@@ -76,20 +73,19 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeWaardeIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Click="btnVulDeWaardeIn_Click"
             Content="Vul de random waarde in" />
 
         <local:TextBoxWithSymbol
             x:Name="txtEenheidsprijs"
             Grid.Row="3"
             Grid.Column="2"
-            Tag="€"
-            Text=" €" />
+            Tag="€" />
 
         <local:TextBoxWithSymbol
             x:Name="txtNettoTeBetalenBedrag"

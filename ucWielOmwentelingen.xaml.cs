@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -7,17 +5,14 @@ namespace LogikaOefening
     /// <summary>
     /// Interaction logic for ucOmwentelingWiel.xaml
     /// </summary>
-    public partial class ucOmwentelingWiel : UserControl
+    public partial class ucWielOmwentelingen : UserControl
     {
-        public ucOmwentelingWiel()
+        public ucWielOmwentelingen()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-
-        private void btnVulDeWaardeUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            txtDiameter.Text = "16";
-        }
+        public List<TextBox> listTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -27,14 +22,17 @@ namespace LogikaOefening
                 txtOmwentelingInch.Text = Math.Round(((diameter.Value * Math.PI) / 2.54), 4).ToString();
                 txtOmwentelingM.Text = Math.Round(((diameter.Value * Math.PI) / 100), 4).ToString();
             }
-
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtDiameter.Text = String.Empty;
-            txtOmwentelingInch.Text = String.Empty;
-            txtOmwentelingM.Text = String.Empty;
-        }        
+            Utils.VerwijderenTextInTextBoxes(listTB);
+        }
+
+        private void btnVulDeWaardeIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random();
+            txtDiameter.Text = random.Next(10, 51).ToString();
+        }
     }
 }

@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LogikaOefening
 {
@@ -23,9 +11,11 @@ namespace LogikaOefening
         public ucFactuur()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            listTB.Remove(txtTotaal2);
         }
-
-        double upperTotaal = 0;
+        public List<TextBox> listTB { get; private set; }
+        private double upperTotaal = 0;
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
@@ -48,34 +38,30 @@ namespace LogikaOefening
             btw = (subTotal * btwPercent.Value) / 100;
             totaal = subTotal + btw;
 
-            txtHandelskorting.Text = Double.Round(handelsKorting, 2).ToString("F2") + " €";
-            txtSubTotaal.Text = Double.Round(subTotal, 2).ToString("F2") + " €";
-            txtBTW.Text = Double.Round(btw, 2).ToString("F2") + " €";
-            txtTotaal.Text = Double.Round(totaal, 2).ToString("F2") + " €";
+            txtHandelskorting.Text = Double.Round(handelsKorting, 2).ToString("F2");
+            txtSubTotaal.Text = Double.Round(subTotal, 2).ToString("F2");
+            txtBTW.Text = Double.Round(btw, 2).ToString("F2");
+            txtTotaal.Text = Double.Round(totaal, 2).ToString("F2");
 
             upperTotaal += totaal;
-            txtTotaal2.Text = Double.Round(upperTotaal, 2).ToString("F2") + " €";
+            txtTotaal2.Text = Double.Round(upperTotaal, 2).ToString("F2");
 
         }        
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            txtPrijs.Text = String.Empty;
-            txtBTWPercent.Text = String.Empty;
-            txtKortingPercentage.Text = String.Empty;
-            txtHandelskorting.Text= String.Empty;
-            txtSubTotaal.Text= String.Empty;
-            txtBTW.Text = String.Empty;
-            txtTotaal.Text = String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
+        }   
 
-        }
-        
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, RoutedEventArgs e)
+        private void btnVulDeRandomWaardenIn_Click(object sender, RoutedEventArgs e)
         {
-            txtPrijs.Text = "1000";
-            txtBTWPercent.Text = "21";
-            txtKortingPercentage.Text = "12";
+            Random random = new Random();
+            txtPrijs.Text = random.Next(500, 5001).ToString();
+
+            int[] btws = { 0, 6, 9, 12, 21 };            
+            txtBTWPercent.Text = btws[random.Next(btws.Length)].ToString();
+
+            txtKortingPercentage.Text = random.Next(5, 25).ToString();
         }
     }
 }

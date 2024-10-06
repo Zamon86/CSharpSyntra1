@@ -10,7 +10,7 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="auto" />
@@ -42,10 +42,7 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="4"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="6"            
             FontSize="30"
             FontWeight="Bold"
             Text="Celsius naar Fahrenheid en omgekeerd" />
@@ -99,27 +96,25 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardeUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="4"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
-            Content="Vul de waarde in" />
+            Click="btnVulDeWaardenIn_Click"
+            Content="Vul de waarden in" />
 
         <local:TextBoxWithSymbol
             x:Name="txtCelsius"
             Grid.Row="3"
             Grid.Column="2"
-            Tag="°C"
-            Text=" °C" />
+            Tag="°C" />
 
         <local:TextBoxWithSymbol
             x:Name="txtFahrenheid"
             Grid.Row="3"
             Grid.Column="4"
-            Tag="°F"
-            Text=" °F" />
+            Tag="°F" />
 
         <local:TextBoxWithSymbol
             x:Name="txtOmzettingNaarFahrenheid"
@@ -136,5 +131,5 @@
             Tag="°C" />
 
     </Grid>
-
+    
 </UserControl>

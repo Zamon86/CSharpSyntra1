@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,15 +11,17 @@ namespace LogikaOefening
         public ucHandelaarPeeters()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
+        public List<TextBox> listTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
             double? prijs = Utils.ConvertTextBoxInputToDouble(txtPrijs);
             double? btwPercent = Utils.ConvertTextBoxInputToDouble(txtBTWPercent);
             double kortingBedrag = 0;
-            double btwBedrag = 0;
-            double totaal = 0;
+            double btwBedrag;
+            double totaal;
             
 
             if (prijs == null || btwPercent == null)
@@ -39,25 +39,23 @@ namespace LogikaOefening
 
             txtHandelskorting.Text = Math.Round(kortingBedrag, 2).ToString("F2");
             txtBTW.Text = Math.Round(btwBedrag, 2).ToString("F2");
-            txtTotaal.Text = Math.Round(totaal, 2).ToString("F2");
-            
-
+            txtTotaal.Text = Math.Round(totaal, 2).ToString("F2");       
         }
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            txtPrijs.Text = String.Empty;
-            txtBTWPercent.Text = String.Empty;
-            txtHandelskorting.Text= String.Empty;
-            txtBTW.Text = String.Empty;
-            txtTotaal.Text= String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
+        
 
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, RoutedEventArgs e)
         {
-            txtPrijs.Text = "1500";
-            txtBTWPercent.Text = "21";           
+            Random random = new Random();
+
+            txtPrijs.Text = (random.Next(10, 51) * 100).ToString();
+            
+            int[] btws = { 0, 6, 9, 12, 21 };
+            txtBTWPercent.Text = btws[random.Next(btws.Length)].ToString();
         }
     }
 }

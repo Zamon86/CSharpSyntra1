@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LogikaOefening
 {
@@ -24,7 +11,9 @@ namespace LogikaOefening
         public ucSomVanDrieGetallen()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
+        public List<TextBox> listTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +28,7 @@ namespace LogikaOefening
 
             try
             {
-                int som = checked((int)getal1 + (int)getal2 + (int)getal3);
+                int som = checked(getal1.Value + getal2.Value + getal3.Value);
                 txtSom.Text = som.ToString();
             }
             catch (OverflowException)
@@ -52,19 +41,15 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            txtGetal1.Text = String.Empty;
-            txtGetal2.Text = String.Empty;
-            txtGetal3.Text = String.Empty;
-            txtSom.Text= String.Empty;
-        }
+            Utils.VerwijderenTextInTextBoxes(listTB);
+        }        
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, RoutedEventArgs e)
+        private void btnVulDeRandomWaardenIn_Click(object sender, RoutedEventArgs e)
         {
-            txtGetal1.Text = "10";
-            txtGetal2.Text = "20";
-            txtGetal3.Text = "30";
-
+            Random random = new Random();
+            txtGetal1.Text = random.Next(100).ToString();
+            txtGetal2.Text = random.Next(100).ToString();
+            txtGetal3.Text = random.Next(100).ToString();
         }
-        
     }
 }

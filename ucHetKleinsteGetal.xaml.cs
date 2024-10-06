@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,25 +10,19 @@ namespace LogikaOefening
         public ucHetKleinsteGetal()
         {
             InitializeComponent();
-            listTB = new List<TextBox>();
-            foreach (TextBox tb in MainGrid.Children.OfType<TextBox>())
-            {
-                listTB.Add(tb);
-            }
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
         public List<TextBox> listTB { get; private set; }
 
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Random rnd = new Random();
-
+            Random random = new Random();
             foreach (TextBox tb in listTB)
             {
                 if (tb.Name.Contains("txtGetal"))
                 {
-                    tb.Text = rnd.Next(-100000, 100000).ToString();
+                    tb.Text = random.Next(100001).ToString();
                 }
             }
         }

@@ -1,35 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LogikaOefening
 {
     /// <summary>
     /// Interaction logic for ucEenWillekeurigGetalvergelijken.xaml
     /// </summary>
-    public partial class ucEenWillekeurigGetalvergelijken : UserControl
+    public partial class ucVergelijkWillekeurigGetal : UserControl
     {
-        public ucEenWillekeurigGetalvergelijken()
+        public ucVergelijkWillekeurigGetal()
         {
             InitializeComponent();
-            listTb = new List<TextBox>();
-
-            foreach (TextBox tb in mainGrid.Children.OfType<TextBox>())
-            {
-                listTb.Add(tb);
-            }
-
+            listTb = [.. mainGrid.Children.OfType<TextBox>()];  
         }
 
         public List<TextBox> listTb { get; private set; }
@@ -57,16 +39,22 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTb)
-            {
-                tb.Text = String.Empty;
-            }
+           Utils.VerwijderenTextInTextBoxes(listTb);
         }
 
         private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            txtGetal.Text = random.Next(25).ToString();
+
+            if (random.NextDouble() >= 0.5)
+            {
+                txtGetal.Text = random.Next(6).ToString();
+            }
+            else
+            {
+                txtGetal.Text = random.Next(201).ToString();
+            }
+            
         }
     }
 }

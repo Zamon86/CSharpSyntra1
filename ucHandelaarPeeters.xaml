@@ -9,7 +9,7 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">  
 
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
@@ -39,98 +39,44 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="2"            
             FontSize="30"
             FontWeight="Bold"
             Text="Handelaar Peeters" />
 
-        <TextBlock
+        <Label
             Grid.Row="3"
             Grid.Column="1"
-            Text="Prijs:" />
+            Content="Prijs:" />
 
-        <TextBlock
+        <Label
             Grid.Row="4"
             Grid.Column="1"
-            Text="BTW percentage:" />
+            Content="BTW percentage:" />
 
         <CheckBox
             Name="chkIsBetaaldBinnen10Dagen"
             Grid.Row="5"
             Grid.Column="2"
-            VerticalAlignment="Center">
-
-            <CheckBox.Template>
-                <ControlTemplate TargetType="CheckBox">
-                    <StackPanel Orientation="Horizontal">
-                        <Border
-                            Width="40"
-                            Height="40"
-                            VerticalAlignment="Center"
-                            Background="White"
-                            BorderBrush="Black"
-                            BorderThickness="3"
-                            CornerRadius="5">
-                            <Grid>
-                                <Grid
-                                    Name="backgroundGrid"
-                                    Width="40"
-                                    Height="40"
-                                    Background="White" />
-                                <Path
-                                    x:Name="CheckMark"
-                                    Width="22"
-                                    Height="22"
-                                    Margin="0,0,0,0"
-                                    Data="M24.565002,9.5650024L13,19 9.3150024,14.315002 6.3800049,17.375 13,26 26,11z M16,0C24.839996,0 32,7.1650085 32,16 32,24.839996 24.839996,32 16,32 7.1650085,32 0,24.839996 0,16 0,7.1650085 7.1650085,0 16,0z"
-                                    Fill="#FF780000"
-                                    RenderTransformOrigin="0.5,0.5"
-                                    Stretch="Uniform"
-                                    Visibility="Collapsed">
-                                    <Path.RenderTransform>
-                                        <TransformGroup>
-                                            <TransformGroup.Children>
-                                                <RotateTransform Angle="0" />
-                                                <ScaleTransform ScaleX="1" ScaleY="1" />
-                                            </TransformGroup.Children>
-                                        </TransformGroup>
-                                    </Path.RenderTransform>
-                                </Path>
-                            </Grid>
-
-                        </Border>
-
-                        <TextBlock
-                            Margin="5,0,0,0"
-                            VerticalAlignment="Center"
-                            Text="Is betaald binnen 10 dagen" />
-                    </StackPanel>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"            
+            Content="Is betaald binnen 10 dagen"> 
         </CheckBox>
 
-        <TextBlock
+        <Label
             Grid.Row="7"
             Grid.Column="1"
-            Text="Handelskorting:" />
+            Content="Handelskorting:" />
 
-        <TextBlock
+        <Label
             Grid.Row="8"
             Grid.Column="1"
-            Text="BTW:" />
-        <TextBlock
+            Content="BTW:" />
+        
+        <Label
             Grid.Row="9"
             Grid.Column="1"
-            Text="Totaal:" />
+            Content="Totaal:" />
 
         <Button
             Name="btnBerekenen"
@@ -145,14 +91,13 @@
             x:Name="txtPrijs"
             Grid.Row="3"
             Grid.Column="2"
-            Tag="€"
-            Text=" €" />
+            Tag="€"/>
+        
         <local:TextBoxWithSymbol
             x:Name="txtBTWPercent"
             Grid.Row="4"
             Grid.Column="2"
-            Tag="%"
-            Text=" %" />
+            Tag="%"/>
 
         <local:TextBoxWithSymbol
             x:Name="txtHandelskorting"
@@ -167,6 +112,7 @@
             Grid.Column="2"
             IsReadOnly="True"
             Tag="€" />
+        
         <local:TextBoxWithSymbol
             x:Name="txtTotaal"
             Grid.Row="9"
@@ -184,14 +130,12 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Click="btnVulDeWaardenIn_Click"
             Content="Vul de waarden in" />
-
     </Grid>
-
 </UserControl>

@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,23 +10,21 @@ namespace LogikaOefening
         public ucIngelezenEenheidsPrijs()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];        
         }
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Random random = new Random();
-            double maxRandom = 450;
-            double minRandom = 50;
+        public List<TextBox> listTB { get; private set; }
 
-            double prijs = random.NextDouble() * (maxRandom - minRandom) + minRandom;
-            txtEenheidsprijs.Text = Math.Round(prijs, 2).ToString("F2");
+        private void btnVulDeWaardeIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random(); 
+            txtEenheidsprijs.Text = Math.Round(random.NextDouble() * (450 - 50) + 50, 2).ToString("F2");
 
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtEenheidsprijs.Text = String.Empty;
-            txtNettoTeBetalenBedrag.Text = String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)

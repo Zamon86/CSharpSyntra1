@@ -10,7 +10,7 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
-    <Grid x:Name="MainGrid">
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
@@ -40,10 +40,7 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="4"           
             FontSize="30"
             FontWeight="Bold"
             Text="Verzekringpolis" />
@@ -97,30 +94,34 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardenUitDeOefeningIn_Click"
+            Click="btnVulDeWaardenIn_Click"
             Content="Vul de waarden in" />
 
         <TextBox
             Name="txtNaam"
             Grid.Row="3"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtHuidigeTrap"
             Grid.Row="4"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtMaxTrap"
             Grid.Row="5"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtMinTrap"
             Grid.Row="6"
             Grid.Column="2" />
+        
         <TextBox
             Name="txtAantalOngevallenDitJaar"
             Grid.Row="7"
@@ -130,6 +131,5 @@
             Name="txtMijnNieuweTrap"
             Grid.Row="9"
             Grid.Column="2" />
-
     </Grid>
 </UserControl>

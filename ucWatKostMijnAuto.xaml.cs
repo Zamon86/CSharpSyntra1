@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,40 +10,17 @@ namespace LogikaOefening
         public ucWatKostMijnAuto()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];            
         }
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            txtAankoopPrijsAuto.Text = "25000";
-            txtBTWPercentage.Text = "21";
-            txtJaarlijkseVerkeersbelasting.Text = "500";
-            txtJaarlijkseVerzekering.Text = "1200";
-            txtAfschrijftermijn.Text = "8";
-            txtAantalKmJ.Text = "30000";
-            txtPrijsLiterDiesel.Text = "1,5";
-            txtVerbruik.Text = "7,5";
-            txtOnderhoud.Text = "450";
-        }
+        public List<TextBox> listTB { get; private set; }        
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtAankoopPrijsAuto.Text = String.Empty;
-            txtBTWPercentage.Text = String.Empty;
-            txtJaarlijkseVerkeersbelasting.Text = String.Empty;
-            txtAfschrijftermijn.Text = String.Empty;
-            txtAantalKmJ.Text = String.Empty;
-            txtPrijsLiterDiesel.Text = String.Empty;
-            txtVerbruik.Text = String.Empty;
-            txtOnderhoud.Text = String.Empty;
-            txtVasteKosten.Text = String.Empty;
-            txtVariabeleKosten.Text = String.Empty;
-            txtJaarlijkseKost.Text = String.Empty;
-            txtTotaleKost.Text = String.Empty;
-            txtJaarlijkseVerzekering.Text = String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
+        {       
             double? aankoopPrijsAuto = Utils.ConvertTextBoxInputToDouble(txtAankoopPrijsAuto);
             double? btwPercentage = Utils.ConvertTextBoxInputToDouble(txtBTWPercentage);
             double? jaarlijkseVerkeersbelasting = Utils.ConvertTextBoxInputToDouble(txtJaarlijkseVerkeersbelasting);
@@ -73,6 +48,20 @@ namespace LogikaOefening
 
             txtTotaleKost.Text = (variabeleKosten + vasteKosten).ToString("F2");
 
+        }
+
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random();
+            txtAankoopPrijsAuto.Text = (random.Next(15, 201) * 1000).ToString();
+            txtBTWPercentage.Text = "21";
+            txtJaarlijkseVerkeersbelasting.Text = (random.Next(25, 101) * 10).ToString();
+            txtJaarlijkseVerzekering.Text = (random.Next(5, 26) * 100).ToString();
+            txtAfschrijftermijn.Text = random.Next(5, 10).ToString();
+            txtAantalKmJ.Text = (random.Next(15, 101) * 1000).ToString(); ;
+            txtPrijsLiterDiesel.Text = Math.Round((random.NextDouble() * (2.3 - 1.5) + 1.5), 2).ToString("F2");
+            txtVerbruik.Text = Math.Round((random.NextDouble() * (12 - 4) + 4), 1).ToString("F1");
+            txtOnderhoud.Text = (random.Next(45, 201) * 10).ToString();
         }
     }
 }

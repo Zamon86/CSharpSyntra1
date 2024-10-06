@@ -11,10 +11,10 @@
 
     <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -39,10 +39,7 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="4"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="4"            
             FontSize="30"
             FontWeight="Bold"
             Text="Controle rekeningnummer" />
@@ -91,13 +88,13 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardenUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeRandomWaardenIn_Click"
-            Content="Vul de random waarden in" />
+            Click="btnVulDeWaardenIn_Click"
+            Content="Vul de waarden in" />
 
         <TextBox
             x:Name="txtGetal1"
@@ -124,7 +121,5 @@
             Grid.Row="8"
             Grid.Column="2"
             IsReadOnly="True" />
-
     </Grid>
-
 </UserControl>

@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,21 +10,13 @@ namespace LogikaOefening
         public ucCelsius_Fahrenheid()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            txtCelsius.Text = "25";
-            txtFahrenheid.Text = "80";            
-        }
-        
+        public List<TextBox> listTB { get; private set; }       
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtCelsius.Text = String.Empty;
-            txtFahrenheid.Text = String.Empty;
-            txtOmzettingNaarCelsius.Text = String.Empty;
-            txtOmzettingNaarFahrenheid.Text = String.Empty;            
+            Utils.VerwijderenTextInTextBoxes(listTB);          
         }
 
         private void btnBerekenenCF_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -47,6 +37,13 @@ namespace LogikaOefening
             {
                 txtOmzettingNaarCelsius.Text = Math.Round((fahrenheid.Value - 32) * 5 / 9, 1).ToString();
             }
+        }
+
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random();
+            txtCelsius.Text = Math.Round((random.NextDouble() * (50 - (-15)) + (-15)), 1).ToString();
+            txtFahrenheid.Text = Math.Round((random.NextDouble() * 122), 1).ToString();
         }
     }
 }

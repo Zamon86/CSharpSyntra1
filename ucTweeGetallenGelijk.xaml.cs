@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -7,38 +5,33 @@ namespace LogikaOefening
     /// <summary>
     /// Interaction logic for ucGetallenZijnGelijk.xaml
     /// </summary>
-    public partial class ucGetallenZijnGelijk : UserControl
+    public partial class ucTweeGetallenGelijk : UserControl
     {
-        public ucGetallenZijnGelijk()
+        public ucTweeGetallenGelijk()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
+        public List<TextBox> listTB { get; private set; }
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random random = new Random();
-            int getal1 = random.Next(10, 20);
-            int getal2;
+            txtGetal1.Text = random.Next(10, 21).ToString();            
 
-            if (random.NextDouble() >= 0.5)
+            if (random.NextDouble() >= 0.66)
             {
-                getal2 = getal1;
+                txtGetal2.Text = txtGetal1.Text;
             }
             else
             {
-                getal2 = random.Next(0, 10);
-            }
-
-            txtGetal1.Text = getal1.ToString();
-            txtGetal2.Text = getal2.ToString();
-
+                txtGetal2.Text = random.Next(0, 31).ToString();
+            }      
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtBoodschap.Text = string.Empty;
-            txtGetal1.Text = string.Empty;
-            txtGetal2.Text = string.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -59,8 +52,6 @@ namespace LogikaOefening
             {
                 txtBoodschap.Text = "De twee getallen zijn niet gelijk";
             }
-
-
         }
     }
 }

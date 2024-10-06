@@ -1,5 +1,3 @@
-
-using System;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -12,20 +10,13 @@ namespace LogikaOefening
         public ucGemiddelde()
         {
             InitializeComponent();
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            txtJanuari.Text = "110000";
-            txtJuli.Text = "115000";
-            txtDecember.Text = "100000";
-        }
+        public List<TextBox> listTB { get; private set; }        
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            txtJanuari.Text = String.Empty;
-            txtJuli.Text = String.Empty;
-            txtDecember.Text = String.Empty;
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -40,7 +31,14 @@ namespace LogikaOefening
             }
 
             txtGemiddelde.Text = Math.Round(((januari.Value + juli.Value + december.Value)/3), 2).ToString();
+        }
 
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Random random = new Random();
+            txtJanuari.Text = (random.Next(90, 201) * 1000).ToString();
+            txtJuli.Text = (random.Next(90, 201) * 1000).ToString();
+            txtDecember.Text = (random.Next(90, 201) * 1000).ToString();
         }
     }
 }

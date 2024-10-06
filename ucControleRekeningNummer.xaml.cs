@@ -1,7 +1,3 @@
-
-using System;
-using System.Configuration;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -20,21 +16,22 @@ namespace LogikaOefening
         public List<TextBox> listTB { get; private set; }
 
 
-        private void btnVulDeRandomWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random rnd = new Random();
             string group1 = string.Empty;
-            string group2 = string.Empty; ;
-            string group3 = string.Empty; ;
+            string group2 = string.Empty;
+            string group3 = string.Empty;
 
-            if (rnd.Next(2) == 1)            {
-                
+            if (rnd.Next(2) == 1)            
+            {                
                 int g3 = rnd.Next(1, 98);
 
                 if (g3 < 10)
                 {
                     group3 = "0" + g3;
-                } else
+                } 
+                else
                 {
                     group3 = g3.ToString();
                 }
@@ -82,10 +79,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTB)
-            {
-                tb.Text = String.Empty;
-            }
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)

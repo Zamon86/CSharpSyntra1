@@ -9,7 +9,7 @@
     d:DesignWidth="1000"
     mc:Ignorable="d">    
 
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="4*" />
@@ -39,13 +39,10 @@
         <TextBlock
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Grid.ColumnSpan="4"                   
             FontSize="30"
             FontWeight="Bold"
-            Text="Aantal onwentelingen" />
+            Text="Aantal wiel onwentelingen per afstand" />
 
         <Label
             Grid.Row="3"
@@ -81,34 +78,31 @@
             Content="Verwijderen..." />
 
         <Button
-            Name="btnVulDeWaardeUitDeOefeningIn"
+            Name="btnVulDeWaardenIn"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Click="btnVulDeWaardeUitDeOefeningIn_Click"
+            Click="btnVulDeWaardenIn_Click"
             Content="Vul de waarden in" />
 
         <local:TextBoxWithSymbol
             x:Name="txtDiameter"
             Grid.Row="3"
             Grid.Column="2"
-            Tag="cm"
-            Text=" cm" />
+            Tag="cm" />
 
         <local:TextBoxWithSymbol
             x:Name="txtAantalM"
             Grid.Row="4"
             Grid.Column="2"
-            Tag="m"
-            Text=" m" />
+            Tag="m" />
+        
         <TextBox
             Name="txtAantalOmwentelingen"
             Grid.Row="7"
             Grid.Column="2"
             IsReadOnly="True" />
-
     </Grid>
-
-
+    
 </UserControl>

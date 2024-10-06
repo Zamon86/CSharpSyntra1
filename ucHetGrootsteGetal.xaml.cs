@@ -1,6 +1,3 @@
-
-using System;
-
 using System.Windows.Controls;
 
 namespace LogikaOefening
@@ -13,18 +10,13 @@ namespace LogikaOefening
         public ucHetGrootsteGetal()
         {
             InitializeComponent();
-
-            listTB = new List<TextBox>();
-            foreach (TextBox tb in MainGrid.Children.OfType<TextBox>())
-            {
-                listTB.Add(tb);
-            }
+            listTB = [.. mainGrid.Children.OfType<TextBox>()];            
         }
 
         public List<TextBox> listTB { get; private set; }
 
 
-        private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random rnd = new Random();
 
@@ -32,18 +24,14 @@ namespace LogikaOefening
             {
                 if (tb.Name.Contains("txtGetal"))
                 {
-                    tb.Text = rnd.Next(-100000, 100000).ToString();
+                    tb.Text = rnd.Next(-100000, 100001).ToString();
                 }
             }
         }
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTB)
-            {
-                tb.Text = String.Empty;
-            }
-
+            Utils.VerwijderenTextInTextBoxes(listTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -71,8 +59,7 @@ namespace LogikaOefening
             else
             {
                 return;
-            }
-                
+            }              
             
             txtHetGrootsteGetal.Text = maxValue.ToString();
         }
