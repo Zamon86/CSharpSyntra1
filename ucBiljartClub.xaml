@@ -1,0 +1,88 @@
+<UserControl
+    x:Class="LogikaOefening.ucBiljartClub"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LogikaOefening"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="1000"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            FontSize="30"
+            FontWeight="Bold"
+            Text="Biljart Club" />
+
+        <Label
+            Grid.Row="7"
+            Grid.Column="1"
+            Content="Aantal stemmen voor kandidaat 1:" />
+
+        <Label
+            Grid.Row="8"
+            Grid.Column="1"
+            Content="Aantal stemmen voor kandidaat 2:" />
+
+        <Button
+            Name="btnBerekenen"
+            Grid.Row="6"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnBerekenen_Click"
+            Content="Berekenen..." />
+
+        <Button
+            Name="btnVerwijderen"
+            Grid.Row="9"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVerwijderen_Click"
+            Content="Verwijderen..." />
+
+        <TextBox
+            Name="txtAantal1"
+            Grid.Row="7"
+            Grid.Column="2"
+            IsReadOnly="True" />
+
+        <TextBox
+            Name="txtAantal2"
+            Grid.Row="8"
+            Grid.Column="2"
+            IsReadOnly="True" />
+
+    </Grid>
+</UserControl>

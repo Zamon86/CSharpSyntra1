@@ -15,6 +15,7 @@ namespace LogikaOefening
 
             List<string> symbols = new List<string>
             {
+                "l/km",
                 "€/l",
                 "km",
                 "€",

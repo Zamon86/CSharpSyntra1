@@ -154,57 +154,68 @@ namespace LogikaOefening
 
         private void btnOpeningBenzineStation2_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucOpeningBenzineStation2 ucOpeningBenzineStation2 = new ucOpeningBenzineStation2();
+            OpenMyUserControl(ucOpeningBenzineStation2);
         }
 
         private void btnBloemenWinkel_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucBleomenzaak ucBleomenzaak = new ucBleomenzaak();
+            OpenMyUserControl(ucBleomenzaak);
         }
 
         private void btn10Getallen_Click(object sender, RoutedEventArgs e)
         {
-            
+            uc10Getallen uc10Getallen = new uc10Getallen();
+            OpenMyUserControl(uc10Getallen);
         }
 
         private void btn10GetallenOmgekeerd_Click(object sender, RoutedEventArgs e)
         {
-            
+            uc10GetallenOmgekeerd uc10GetallenOmgekeerd = new uc10GetallenOmgekeerd();
+            OpenMyUserControl(uc10GetallenOmgekeerd);
         }
 
         private void btn10KeerDeVoornaam_Click(object sender, RoutedEventArgs e)
         {
-            
+            uc10Voornaam uc10Voornaam = new uc10Voornaam();
+            OpenMyUserControl(uc10Voornaam);
         }
 
         private void btnGeef10Evengetallen_Click(object sender, RoutedEventArgs e)
         {
-            
+            uc10EvenGetallen uc10EvenGetallen = new uc10EvenGetallen();
+            OpenMyUserControl(uc10EvenGetallen);
         }
 
         private void btnGemiddeldeVerbruik_Click(object sender, RoutedEventArgs e)
         {
-           
+            ucGemiddeldeVerbruik ucGemiddeldeVerbruik = new ucGemiddeldeVerbruik();
+            OpenMyUserControl(ucGemiddeldeVerbruik);            
         }
 
         private void btnVreemdeMuntenOmrekenen_Click(object sender, RoutedEventArgs e)
         {
-           
+            ucVreemdeMuntenOmzetten ucVreemdeMuntenOmzetten = new ucVreemdeMuntenOmzetten();
+            OpenMyUserControl(ucVreemdeMuntenOmzetten);
         }
 
         private void btnAantalArtikelen_Click(object sender, RoutedEventArgs e)
         {
-          
+            ucAantalArtikelen ucAantalArtikelen = new ucAantalArtikelen();
+            OpenMyUserControl(ucAantalArtikelen);
         }
 
         private void btnBiljartClub_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucBiljartClub ucBiljartClub = new ucBiljartClub();
+            OpenMyUserControl(ucBiljartClub);
         }
 
         private void btnIntrestOp15Jaar_Click(object sender, RoutedEventArgs e)
         {
-           
+           ucIntrestOp15jaar ucInterestOp15jaar = new ucIntrestOp15jaar();
+            OpenMyUserControl(ucInterestOp15jaar);
         }
 
         private void btnPrognoseVerkoop_Click(object sender, RoutedEventArgs e)
