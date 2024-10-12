@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucIngelezenEenheidsPrijs.xaml
-    /// </summary>
+    
     public partial class ucIngelezenEenheidsPrijs : UserControl
     {
         public ucIngelezenEenheidsPrijs()

@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucWinkelKorting.xaml
-    /// </summary>
+  
     public partial class ucKledingWinkel : UserControl
     {
         public ucKledingWinkel()

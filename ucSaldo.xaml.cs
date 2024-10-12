@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucSaldo.xaml
-    /// </summary>
+    
     public partial class ucSaldo : UserControl
     {
         public ucSaldo()

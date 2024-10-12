@@ -5,9 +5,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucIngelezenEenheidsPrijs.xaml
-    /// </summary>
+   
     public partial class ucAantalArtikelen : UserControl
     {
         public ucAantalArtikelen()

@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucHetGrootsteGetal.xaml
-    /// </summary>
+  
     public partial class ucHetGrootsteGetal : UserControl
     {
         public ucHetGrootsteGetal()

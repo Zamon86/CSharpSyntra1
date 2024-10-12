@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucGetallenZijnGelijk.xaml
-    /// </summary>
+    
     public partial class ucTweeGetallenGelijk : UserControl
     {
         public ucTweeGetallenGelijk()

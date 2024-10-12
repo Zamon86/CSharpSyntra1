@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucVariabelen.xaml
-    /// </summary>
+ 
     public partial class ucVariabelen : UserControl
     {
         public ucVariabelen()

@@ -220,42 +220,50 @@ namespace LogikaOefening
 
         private void btnPrognoseVerkoop_Click(object sender, RoutedEventArgs e)
         {
-           
+            ucPrognoseVerkoop ucPrognoseVerkoop = new ucPrognoseVerkoop();
+            OpenMyUserControl(ucPrognoseVerkoop);
         }
 
         private void btnTweeNatuurlijkeGetallen_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucTweeNatuurlijkeGetallen ucTweeNatuurlijkeGetallen = new ucTweeNatuurlijkeGetallen();
+            OpenMyUserControl(ucTweeNatuurlijkeGetallen);
         }
 
         private void btnSomVan5de10de15de_Click(object sender, RoutedEventArgs e)
         {
-           
+            ucSomVan5de10de15de ucSomVan5de10de15de = new ucSomVan5de10de15de();
+            OpenMyUserControl(ucSomVan5de10de15de);
         }
 
         private void btnExtraGrootsteKleinste_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucExtra_Grootste ucExtra_Grootste = new ucExtra_Grootste();
+            OpenMyUserControl(ucExtra_Grootste);
         }
 
         private void btnFillingAnArray_Click(object sender, RoutedEventArgs e)
         {
-          
+            ucFillArray ucFillArray = new ucFillArray();
+            OpenMyUserControl(ucFillArray);
         }
 
         private void btnVoidMethodes_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucVoid ucVoid = new ucVoid();
+            OpenMyUserControl(ucVoid);
         }
 
         private void btnFuncionMethodes_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucFunction ucFunction = new ucFunction();
+            OpenMyUserControl(ucFunction);
         }
 
         private void btnSpecialMethode_Click(object sender, RoutedEventArgs e)
         {
-            
+            ucSpecialMethods ucSpecialMethods = new ucSpecialMethods();
+            OpenMyUserControl(ucSpecialMethods);
         }
 
         private void OpenMyUserControl(UserControl myUC)

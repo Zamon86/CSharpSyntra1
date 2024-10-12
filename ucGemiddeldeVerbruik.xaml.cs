@@ -4,9 +4,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucIngelezenEenheidsPrijs.xaml
-    /// </summary>
+ 
     public partial class ucGemiddeldeVerbruik : UserControl
     {
         public ucGemiddeldeVerbruik()

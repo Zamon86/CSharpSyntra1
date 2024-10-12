@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucDrieGetallenVergelijken.xaml
-    /// </summary>
+  
     public partial class ucDrieGetallen : UserControl
     {
         public ucDrieGetallen()

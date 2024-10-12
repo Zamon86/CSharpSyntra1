@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucVerzekeringsPolis.xaml
-    /// </summary>
+  
     public partial class ucVerzekeringsPolis : UserControl
     {
         public ucVerzekeringsPolis()

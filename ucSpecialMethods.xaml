@@ -1,6 +1,5 @@
-
 <UserControl
-    x:Class="LogikaOefening.ucWielOmwentelingen"
+    x:Class="LogikaOefening.ucSpecialMethods"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,10 +11,10 @@
 
     <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" MinWidth="300" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -43,26 +42,54 @@
             Grid.ColumnSpan="4"
             FontSize="30"
             FontWeight="Bold"
-            Text="Wiel omwentelingen" />
+            Text="Speciale mothoden" />
 
         <Label
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="1"
-            Content="Diameter [cm]:" />
+            Content="Getal 1:" />
 
         <Label
             Grid.Row="5"
             Grid.Column="1"
-            Content="Omwenteling in [inch]:" />
+            Content="Getal 2:" />
+
+        <Label
+            Grid.Row="9"
+            Grid.Column="1"
+            Content="Som 3:" />
+
+        <Label
+            Grid.Row="10"
+            Grid.Column="1"
+            Content="Som 4:" />
 
         <Label
             Grid.Row="7"
             Grid.Column="1"
-            Content="Omwenteling in [m]:" />
+            Grid.ColumnSpan="2"
+            Margin="12,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Content="Som 1:" />
+
+        <Label
+            Grid.Row="8"
+            Grid.Column="1"
+            Content="Som 2:" />
+
+        <Button
+            Name="btnVulDeWaardenIn"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="btnVulDeWaardenIn_Click"
+            Content="Vul de waarden in" />
 
         <Button
             Name="btnBerekenen"
-            Grid.Row="4"
+            Grid.Row="6"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -71,41 +98,45 @@
 
         <Button
             Name="btnVerwijderen"
-            Grid.Row="8"
+            Grid.Row="13"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Click="btnVerwijderen_Click"
             Content="Verwijderen..." />
 
-        <Button
-            Name="btnVulDeWaardeIn"
-            Grid.Row="2"
-            Grid.Column="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Click="btnVulDeWaardeIn_Click"
-            Content="Vul de waarde in" />
+        <TextBox
+            Name="txtGetal1"
+            Grid.Row="4"
+            Grid.Column="2" />
 
-        <local:TextBoxWithSymbol
-            x:Name="txtDiameter"
-            Grid.Row="3"
-            Grid.Column="2"
-            Tag="cm" />
-
-        <local:TextBoxWithSymbol
-            x:Name="txtOmwentelingInch"
+        <TextBox
+            Name="txtGetal2"
             Grid.Row="5"
-            Grid.Column="2"
-            IsReadOnly="True"
-            Tag="in" />
-        <local:TextBoxWithSymbol
-            x:Name="txtOmwentelingM"
+            Grid.Column="2" />
+
+        <TextBox
+            Name="txtSom1"
             Grid.Row="7"
             Grid.Column="2"
-            IsReadOnly="True"
-            Tag="m" />
+            IsReadOnly="True" />
+
+        <TextBox
+            Name="txtSom2"
+            Grid.Row="8"
+            Grid.Column="2"
+            IsReadOnly="True" />
+
+        <TextBox
+            Name="txtSom3"
+            Grid.Row="9"
+            Grid.Column="2"
+            IsReadOnly="True" />
+
+        <TextBox
+            Name="txtSom4"
+            Grid.Row="10"
+            Grid.Column="2"
+            IsReadOnly="True" />
     </Grid>
-
-
 </UserControl>

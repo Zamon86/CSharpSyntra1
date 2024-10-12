@@ -1,6 +1,5 @@
-
 <UserControl
-    x:Class="LogikaOefening.ucWielOmwentelingen"
+    x:Class="LogikaOefening.ucSomVan5de10de15de"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,10 +11,10 @@
 
     <Grid Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" MinWidth="300" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -43,26 +42,21 @@
             Grid.ColumnSpan="4"
             FontSize="30"
             FontWeight="Bold"
-            Text="Wiel omwentelingen" />
+            Text="Maak de som van het 5de, 10de, 15de enz" />
 
         <Label
-            Grid.Row="3"
+            Grid.Row="6"
             Grid.Column="1"
-            Content="Diameter [cm]:" />
-
-        <Label
-            Grid.Row="5"
-            Grid.Column="1"
-            Content="Omwenteling in [inch]:" />
+            Content="Array:" />
 
         <Label
             Grid.Row="7"
             Grid.Column="1"
-            Content="Omwenteling in [m]:" />
+            Content="Resultaat:" />
 
         <Button
             Name="btnBerekenen"
-            Grid.Row="4"
+            Grid.Row="5"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -78,34 +72,17 @@
             Click="btnVerwijderen_Click"
             Content="Verwijderen..." />
 
-        <Button
-            Name="btnVulDeWaardeIn"
-            Grid.Row="2"
+        <TextBox
+            Name="txtArray"
+            Grid.Row="6"
             Grid.Column="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Click="btnVulDeWaardeIn_Click"
-            Content="Vul de waarde in" />
+            IsReadOnly="True" />
 
-        <local:TextBoxWithSymbol
-            x:Name="txtDiameter"
-            Grid.Row="3"
-            Grid.Column="2"
-            Tag="cm" />
-
-        <local:TextBoxWithSymbol
-            x:Name="txtOmwentelingInch"
-            Grid.Row="5"
-            Grid.Column="2"
-            IsReadOnly="True"
-            Tag="in" />
-        <local:TextBoxWithSymbol
-            x:Name="txtOmwentelingM"
+        <TextBox
+            Name="txtResultaat"
             Grid.Row="7"
             Grid.Column="2"
-            IsReadOnly="True"
-            Tag="m" />
+            IsReadOnly="True" />
+
     </Grid>
-
-
 </UserControl>

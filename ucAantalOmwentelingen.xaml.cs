@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucAantalOmwentelingen.xaml
-    /// </summary>
+  
     public partial class ucAantalOmwentelingen : UserControl
     {
         public ucAantalOmwentelingen()

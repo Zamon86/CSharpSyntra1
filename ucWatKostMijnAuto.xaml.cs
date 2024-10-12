@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucWatKostMijnAugo.xaml
-    /// </summary>
+  
     public partial class ucWatKostMijnAuto : UserControl
     {
         public ucWatKostMijnAuto()

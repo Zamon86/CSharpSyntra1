@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucCelsius_Fahrenheid.xaml
-    /// </summary>
+  
     public partial class ucCelsius_Fahrenheid : UserControl
     {
         public ucCelsius_Fahrenheid()

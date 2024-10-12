@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucHandelaarPeeters.xaml
-    /// </summary>
+    
     public partial class ucHandelaarPeeters : UserControl
     {
         public ucHandelaarPeeters()

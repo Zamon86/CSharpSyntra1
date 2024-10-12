@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucOndernemingMetEigenVermogen.xaml
-    /// </summary>
+    
     public partial class ucOnderneming_EigenVermogen : UserControl
     {
         public ucOnderneming_EigenVermogen()

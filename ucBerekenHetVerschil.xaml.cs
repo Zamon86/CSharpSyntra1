@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucHetVerschil.xaml
-    /// </summary>
+  
     public partial class ucBerekenHetVerschil : UserControl
     {
         public ucBerekenHetVerschil()

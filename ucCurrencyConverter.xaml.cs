@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucCurrencyConverter.xaml
-    /// </summary>
+   
     public partial class ucCurrencyConverter : UserControl
     {
         public ucCurrencyConverter()

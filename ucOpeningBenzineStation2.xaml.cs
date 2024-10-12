@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucWatKostMijnAugo.xaml
-    /// </summary>
+    
     public partial class ucOpeningBenzineStation2 : UserControl
     {
         public ucOpeningBenzineStation2()

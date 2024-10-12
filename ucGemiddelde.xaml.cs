@@ -2,9 +2,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucGemiddelde.xaml
-    /// </summary>
+    
     public partial class ucGemiddelde : UserControl
     {
         public ucGemiddelde()

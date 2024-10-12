@@ -3,9 +3,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    /// <summary>
-    /// Interaction logic for ucEenWillekeurigGetalvergelijken.xaml
-    /// </summary>
+    
     public partial class ucVergelijkWillekeurigGetal : UserControl
     {
         public ucVergelijkWillekeurigGetal()
