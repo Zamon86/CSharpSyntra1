@@ -8,9 +8,9 @@ namespace LogikaOefening
         public ucTweeGetallenGelijk()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -29,7 +29,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)

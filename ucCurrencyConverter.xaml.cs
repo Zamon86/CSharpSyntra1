@@ -8,15 +8,16 @@ namespace LogikaOefening
         public ucCurrencyConverter()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-        public List<TextBox> listTB { get; private set; }        
+        public List<TextBox> ListTB { get; private set; }        
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             double? euro = Utils.ConvertTextBoxInputToDouble(txtEuro);
             double? dollarKoers = Utils.ConvertTextBoxInputToDouble(txtDollarKoers);
             double? britsePondKoers = Utils.ConvertTextBoxInputToDouble(txtBritsePondKoers);
+
             if (euro != null && dollarKoers != null && britsePondKoers != null)
             {
                 txtBritsePond.Text = Math.Round(euro.Value/britsePondKoers.Value, 2).ToString("F2");
@@ -26,7 +27,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnVulDeRandomWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)

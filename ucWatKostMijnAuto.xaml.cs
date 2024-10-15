@@ -8,13 +8,13 @@ namespace LogikaOefening
         public ucWatKostMijnAuto()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];            
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];            
         }
-        public List<TextBox> listTB { get; private set; }        
+        public List<TextBox> ListTB { get; private set; }        
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -45,7 +45,6 @@ namespace LogikaOefening
             txtJaarlijkseKost.Text = Math.Round((variabeleKosten + vasteKosten) / afschrijftermijn.Value, 2).ToString("F2");
 
             txtTotaleKost.Text = (variabeleKosten + vasteKosten).ToString("F2");
-
         }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)

@@ -10,15 +10,15 @@ namespace LogikaOefening
         public ucPrognoseVerkoop()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -33,7 +33,6 @@ namespace LogikaOefening
                 return;
             }
 
-
             StringBuilder stringBuilder = new StringBuilder();
             double tussenTijdseOmzet = omzet.Value;
             double tussenTijdseOmzetgroei = 0;
@@ -45,8 +44,7 @@ namespace LogikaOefening
                 stringBuilder.Append(string.Format("De omzetgroei voor {0} bedraagt {1} €.{2}", jaartal + i, tussenTijdseOmzetgroei.ToString("F2"), Environment.NewLine));
             }
 
-            txtResultaat.Text = stringBuilder.ToString().TrimEnd(Environment.NewLine.ToCharArray());
-            
+            txtResultaat.Text = stringBuilder.ToString().TrimEnd(Environment.NewLine.ToCharArray());            
         }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)

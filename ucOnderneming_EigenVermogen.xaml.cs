@@ -9,9 +9,9 @@ namespace LogikaOefening
         public ucOnderneming_EigenVermogen()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
         private void btnK1TotaalActief_Click(object sender, RoutedEventArgs e)
         {
@@ -24,7 +24,6 @@ namespace LogikaOefening
             }
 
             txtK1TotaalActief.Text = (eigenVermogen + vreemdVermogen).ToString();
-
         }
 
         private void btnK2EigenVermogen_Click(object sender, RoutedEventArgs e)
@@ -39,7 +38,6 @@ namespace LogikaOefening
             }
 
             txtK2EigenVermogen.Text = (totaalActief - vreemdVermogen).ToString();
-
         }
 
         private void btnK3TeBetalenBTW_Click(object sender, RoutedEventArgs e)
@@ -65,16 +63,13 @@ namespace LogikaOefening
             {
                 return;
             }
-
             
-            txtK4TeBetalenBTW.Text = (verschuldigdeBTW.Value - aftrekbareBTW.Value - voorschootBTW.Value).ToString("F2");
-            
-
+            txtK4TeBetalenBTW.Text = (verschuldigdeBTW.Value - aftrekbareBTW.Value - voorschootBTW.Value).ToString("F2"); 
         }
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);            
+            Utils.VerwijderenTextInTextBoxes(ListTB);            
         }        
 
         private void btnVulDeRandomWaardenIn_Click(object sender, RoutedEventArgs e)

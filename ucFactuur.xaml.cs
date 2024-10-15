@@ -9,11 +9,11 @@ namespace LogikaOefening
         public ucFactuur()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
-            listTB.Remove(txtTotaal2);
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB.Remove(txtTotaal2);
         }
-        public List<TextBox> listTB { get; private set; }
-        private double upperTotaal = 0;
+        public List<TextBox> ListTB { get; private set; }
+        private double _upperTotaal = 0;
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
@@ -41,14 +41,14 @@ namespace LogikaOefening
             txtBTW.Text = Double.Round(btw, 2).ToString("F2");
             txtTotaal.Text = Double.Round(totaal, 2).ToString("F2");
 
-            upperTotaal += totaal;
-            txtTotaal2.Text = Double.Round(upperTotaal, 2).ToString("F2");
+            _upperTotaal += totaal;
+            txtTotaal2.Text = Double.Round(_upperTotaal, 2).ToString("F2");
 
         }        
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }   
 
         private void btnVulDeRandomWaardenIn_Click(object sender, RoutedEventArgs e)

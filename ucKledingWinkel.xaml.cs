@@ -8,10 +8,10 @@ namespace LogikaOefening
         public ucKledingWinkel()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -46,14 +46,14 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Random rnd = new Random();
-            txtBedrag.Text = rnd.Next(30, 250).ToString();
-            txtKortingspercentage.Text = rnd.Next(5, 15).ToString();
+            Random random = new Random();
+            txtBedrag.Text = random.Next(30, 250).ToString();
+            txtKortingspercentage.Text = random.Next(5, 15).ToString();
         }
     }
 }

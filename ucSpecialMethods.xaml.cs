@@ -10,15 +10,15 @@ namespace LogikaOefening
         public ucSpecialMethods()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];        
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];        
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
         
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -29,7 +29,6 @@ namespace LogikaOefening
             int getal2;
             int mijnRefSom = 0;
             int mijnOutSom;
-
 
             if (txtGetal1.Text == String.Empty || txtGetal1.Text == null)
             {
@@ -83,8 +82,7 @@ namespace LogikaOefening
             }
 
             int som = getal1.Value + getal2.Value;
-            return som; 
-           
+            return som;            
         }
 
         private int Som(int Getal1, int Getal2)
@@ -107,6 +105,5 @@ namespace LogikaOefening
         {
             return getallen.Sum();
         }
-
     }
 }

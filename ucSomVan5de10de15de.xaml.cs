@@ -9,15 +9,15 @@ namespace LogikaOefening
         public ucSomVan5de10de15de()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];        
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];        
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
         
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -37,7 +37,6 @@ namespace LogikaOefening
                     getallen[i] = -(i + 1);
                 }                
             }
-
 
             int som = 0;
             int somNegativeGetallen = 0;
@@ -60,7 +59,6 @@ namespace LogikaOefening
 
             txtResultaat.Text = "Som = " + som.ToString() + Environment.NewLine +
                 "Som negatievegetallen = " + somNegativeGetallen.ToString();
-
         }
     }
 }

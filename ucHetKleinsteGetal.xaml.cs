@@ -8,15 +8,15 @@ namespace LogikaOefening
         public ucHetKleinsteGetal()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Random random = new Random();
-            foreach (TextBox tb in listTB)
+            foreach (TextBox tb in ListTB)
             {
                 if (tb.Name.Contains("txtGetal"))
                 {
@@ -27,11 +27,10 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            foreach (TextBox tb in listTB)
+            foreach (TextBox tb in ListTB)
             {
                 tb.Text = String.Empty;
             }
-
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -39,8 +38,7 @@ namespace LogikaOefening
             List<double> getalen = new List<double>();
             double minValue;
 
-
-            foreach (TextBox tb in listTB)
+            foreach (TextBox tb in ListTB)
             {
                 if (tb.Name.Contains("txtGetal"))
                 {
@@ -49,7 +47,6 @@ namespace LogikaOefening
                     {
                         getalen.Add(getal.Value);
                     }
-
                 }
             }
             if (getalen.Count > 0)

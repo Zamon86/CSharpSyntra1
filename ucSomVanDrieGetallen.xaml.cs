@@ -9,9 +9,9 @@ namespace LogikaOefening
         public ucSomVanDrieGetallen()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +39,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }        
 
         private void btnVulDeRandomWaardenIn_Click(object sender, RoutedEventArgs e)

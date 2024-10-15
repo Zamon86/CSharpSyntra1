@@ -4,8 +4,7 @@ using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    public static class Utils    {
-        
+    public static class Utils    {        
 
         public static double? ConvertTextBoxInputToDouble(TextBox tb)
         {
@@ -26,13 +25,12 @@ namespace LogikaOefening
                 "°F",
                 "°C",
                 "j",
-                "l"                
+                "l"
             };
 
             foreach (String symbol in symbols)
             {
-                input = input.Replace(symbol, "");
-            
+                input = input.Replace(symbol, "");            
             }
             
             inputTrimmed = input.Replace(".", ",").Trim();
@@ -65,14 +63,12 @@ namespace LogikaOefening
             }
         }
 
-        public static void VerwijderenTextInTextBoxes(List<TextBox> listTB)
+        public static void VerwijderenTextInTextBoxes(List<TextBox> ListTB)
         {
-            foreach (TextBox tb in listTB)
+            foreach (TextBox tb in ListTB)
             {
                 tb.Text = String.Empty;
             }
         }
     }
-
-
 }

@@ -11,18 +11,18 @@ namespace LogikaOefening
         public ucAantalArtikelen()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
-        string[] artikelen = { "Schoen", "Muts", "Sok", "Riem", "Broek", "Hemd", "Jas", "T-shirt", "Short", "Hoed" };
-        double[] prijzen = {125, 12.5, 1.99, 24, 65, 49.99, 249.95, 9.99, 24.95, 18 };
+        private string[] _artikelen = { "Schoen", "Muts", "Sok", "Riem", "Broek", "Hemd", "Jas", "T-shirt", "Short", "Hoed" };
+        private double[] _prijzen = {125, 12.5, 1.99, 24, 65, 49.99, 249.95, 9.99, 24.95, 18 };
 
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -34,10 +34,10 @@ namespace LogikaOefening
 
             for (int i = 1; i <= aantal; i++) 
             {
-                willekeurigGetal = random.Next(artikelen.Length);
-                stringBuilder.Append(i + " x " + artikelen[willekeurigGetal]
-                    + " (" + prijzen[willekeurigGetal].ToString("F2") + ")\t= "
-                    + (prijzen[willekeurigGetal] * i).ToString("F2") + "€" + Environment.NewLine);
+                willekeurigGetal = random.Next(_artikelen.Length);
+                stringBuilder.Append(i + " x " + _artikelen[willekeurigGetal]
+                    + " (" + _prijzen[willekeurigGetal].ToString("F2") + ")\t= "
+                    + (_prijzen[willekeurigGetal] * i).ToString("F2") + "€" + Environment.NewLine);
             }
 
             txtResultaat.Text = stringBuilder.ToString().TrimEnd(Environment.NewLine.ToCharArray());
@@ -49,10 +49,10 @@ namespace LogikaOefening
         {
 
             StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < artikelen.Length; i++)
+            for (int i = 0; i < _artikelen.Length; i++)
             {                
-                stringBuilder.Append(artikelen[i]
-                    + " (" + prijzen[i].ToString("F2") + ")" + Environment.NewLine);
+                stringBuilder.Append(_artikelen[i]
+                    + " (" + _prijzen[i].ToString("F2") + ")" + Environment.NewLine);
             }
 
             txtAllItems.Text = stringBuilder.ToString().TrimEnd(Environment.NewLine.ToCharArray());

@@ -9,10 +9,10 @@ namespace LogikaOefening
         public ucDrieGetallen()
         {
             InitializeComponent();
-            listTb = [.. mainGrid.Children.OfType<TextBox>()];            
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];            
         }
 
-        public List<TextBox> listTb { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -60,7 +60,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTb);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }        
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)

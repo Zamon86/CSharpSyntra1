@@ -8,22 +8,22 @@ namespace LogikaOefening
         public ucControleRekeningNummer()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Random rnd = new Random();
+            Random random = new Random();
             string group1 = string.Empty;
             string group2 = string.Empty;
             string group3 = string.Empty;
 
-            if (rnd.Next(2) == 1)            
+            if (random.Next(2) == 1)            
             {                
-                int g3 = rnd.Next(1, 98);
+                int g3 = random.Next(1, 98);
 
                 if (g3 < 10)
                 {
@@ -37,7 +37,7 @@ namespace LogikaOefening
                 int maxMultiplicator = 10309278;
                 int minMultiplicator = 2062;
 
-                long basis = rnd.Next(minMultiplicator, maxMultiplicator) * 97;
+                long basis = random.Next(minMultiplicator, maxMultiplicator) * 97;
                 long basisMetRest = g3 == 97 ? basis : (basis + g3);
                 string group23 = basisMetRest.ToString();
 
@@ -53,17 +53,17 @@ namespace LogikaOefening
             {
                 for (int i = 0; i < 3; i++) 
                 {
-                    group1 = group1 + rnd.Next(10).ToString();                       
+                    group1 = group1 + random.Next(10).ToString();                       
                 }
 
                 for (int i = 0; i < 7; i++)
                 {
-                    group2 = group2 + rnd.Next(10).ToString();
+                    group2 = group2 + random.Next(10).ToString();
                 }
 
                 for (int i = 0; i < 2; i++)
                 {
-                    group3 = group3 + rnd.Next(10).ToString();
+                    group3 = group3 + random.Next(10).ToString();
                 }
 
             }
@@ -77,7 +77,7 @@ namespace LogikaOefening
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)

@@ -8,10 +8,10 @@ namespace LogikaOefening
         public ucVerzekeringsPolis()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -65,11 +65,9 @@ namespace LogikaOefening
             txtMijnNieuweTrap.Text = mijnNieuweTrap.ToString();
         }
 
-
-
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnVulDeWaardenIn_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -78,13 +76,11 @@ namespace LogikaOefening
             int maxTrap = 18;
             int minTrap = 1;
 
-
             txtNaam.Text = "Piotr";
             txtHuidigeTrap.Text = random.Next(minTrap, maxTrap + 1).ToString();
             txtMaxTrap.Text = maxTrap.ToString();
             txtMinTrap.Text = minTrap.ToString();
             txtAantalOngevallenDitJaar.Text = GenerateAantalOngevallen().ToString();
-
         }
 
         static private int GenerateAantalOngevallen()

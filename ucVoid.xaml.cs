@@ -8,15 +8,15 @@ namespace LogikaOefening
         public ucVoid()
         {
             InitializeComponent();
-            listTB = [.. mainGrid.Children.OfType<TextBox>()];        
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];        
         }
 
-        public List<TextBox> listTB { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
         
 
         private void btnVerwijderen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Utils.VerwijderenTextInTextBoxes(listTB);
+            Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnBerekenen_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -55,7 +55,6 @@ namespace LogikaOefening
 
         private void Som()
         {
-
             int? getal1 = Utils.ConvertTextBoxInputToInteger(txtGetal1);
             int? getal2 = Utils.ConvertTextBoxInputToInteger(txtGetal2);
 
@@ -84,13 +83,11 @@ namespace LogikaOefening
             else
             {
                 txtVerschil.Text = verschil.ToString();
-            }
-            
+            }            
         }
 
         private void Delen(int getal1, bool isRandom)
         {
-
             int? getal2;
 
             if (txtGetal2.Text == null || txtGetal2.Text == string.Empty)
@@ -130,7 +127,6 @@ namespace LogikaOefening
             {
                 txtMaal.Text = maal.ToString();
             }
-
         }
     }
 }

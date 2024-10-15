@@ -9,10 +9,10 @@ namespace LogikaOefening
         public ucVergelijkWillekeurigGetal()
         {
             InitializeComponent();
-            listTb = [.. mainGrid.Children.OfType<TextBox>()];  
+            ListTB = [.. mainGrid.Children.OfType<TextBox>()];  
         }
 
-        public List<TextBox> listTb { get; private set; }
+        public List<TextBox> ListTB { get; private set; }
 
 
         private void btnBerekenen_Click(object sender, RoutedEventArgs e)
@@ -32,12 +32,11 @@ namespace LogikaOefening
             {
                 txtResultaat.Text = "Het getal ligt NIET tussen 0-5";
             }
-
         }
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
         {
-           Utils.VerwijderenTextInTextBoxes(listTb);
+           Utils.VerwijderenTextInTextBoxes(ListTB);
         }
 
         private void btnVulDeWaardenUitDeOefeningIn_Click(object sender, RoutedEventArgs e)
@@ -51,8 +50,7 @@ namespace LogikaOefening
             else
             {
                 txtGetal.Text = random.Next(201).ToString();
-            }
-            
+            }            
         }
     }
 }
