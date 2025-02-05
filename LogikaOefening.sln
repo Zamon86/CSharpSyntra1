@@ -5,7 +5,13 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogikaOefening", "LogikaOefening.csproj", "{29CD9154-7C32-499C-8C66-9C70C9E960DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraLogikaOefening", "..\ExtraLogikaOefening\ExtraLogikaOefening.csproj", "{F96C2058-709F-48CD-BE8C-8CEA66FEAE51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtraLogikaOefening", "..\ExtraLogikaOefening\ExtraLogikaOefening.csproj", "{F96C2058-709F-48CD-BE8C-8CEA66FEAE51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstExampleWPF", "..\FirstExampleWPF\FirstExampleWPF.csproj", "{01BF5524-B18C-405B-B9A6-B242D5F78377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF containers", "..\WPF containers\WPF containers.csproj", "{0DCDE7B7-824A-45F6-A07E-E3536AB6FC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Controls", "..\WPF Controls\WPF Controls.csproj", "{13292374-CC64-424F-A9AC-6778CF11B66D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{F96C2058-709F-48CD-BE8C-8CEA66FEAE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F96C2058-709F-48CD-BE8C-8CEA66FEAE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F96C2058-709F-48CD-BE8C-8CEA66FEAE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BF5524-B18C-405B-B9A6-B242D5F78377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BF5524-B18C-405B-B9A6-B242D5F78377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BF5524-B18C-405B-B9A6-B242D5F78377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BF5524-B18C-405B-B9A6-B242D5F78377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCDE7B7-824A-45F6-A07E-E3536AB6FC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCDE7B7-824A-45F6-A07E-E3536AB6FC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCDE7B7-824A-45F6-A07E-E3536AB6FC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCDE7B7-824A-45F6-A07E-E3536AB6FC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13292374-CC64-424F-A9AC-6778CF11B66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13292374-CC64-424F-A9AC-6778CF11B66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13292374-CC64-424F-A9AC-6778CF11B66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13292374-CC64-424F-A9AC-6778CF11B66D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

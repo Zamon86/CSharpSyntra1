@@ -1,10 +1,8 @@
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-  
+
     public partial class ucExtra_Grootste : UserControl
     {
         public ucExtra_Grootste()

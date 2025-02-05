@@ -1,9 +1,8 @@
-using System.Text;
 using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-    
+
     public partial class ucSomVan5de10de15de : UserControl
     {
         public ucSomVan5de10de15de()

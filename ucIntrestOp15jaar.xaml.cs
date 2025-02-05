@@ -1,10 +1,9 @@
 using System.Text;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace LogikaOefening
 {
- 
+
     public partial class ucIntrestOp15jaar : UserControl
     {
         public ucIntrestOp15jaar()

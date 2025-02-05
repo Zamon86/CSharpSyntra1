@@ -1,9 +1,8 @@
-using System.Windows;
 using System.Windows.Controls;
 
 namespace LogikaOefening
 {
-   
+
     public partial class ucBleomenzaak : UserControl
     {
         public ucBleomenzaak()

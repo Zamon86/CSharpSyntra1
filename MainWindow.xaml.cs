@@ -10,7 +10,9 @@ namespace LogikaOefening
     {
         public MainWindow()
         {
+            MessageBox.Show(Math.Tan(15).ToString());
             InitializeComponent();
+            
         }
 
         private void btnVariabelen_Click(object sender, RoutedEventArgs e)
